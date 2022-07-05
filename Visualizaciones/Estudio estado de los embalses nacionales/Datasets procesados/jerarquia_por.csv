@@ -1,0 +1,387 @@
+cuenca_hidrografica,embalse_nombre,porcentaje_medio_10
+Cantábrico Occidental,Alfilorios,78.23275862068965
+Cantábrico Occidental,Alsa - Mediajo,75.42109195402298
+Cantábrico Occidental,Arbón,90.85785440613027
+Cantábrico Occidental,"Barca, La",71.71557471264367
+Cantábrico Occidental,"Cohilla, La",41.82676245210728
+Cantábrico Occidental,Doiras,84.81888888888889
+Cantábrico Occidental,Rioseco,76.00896860986548
+Cantábrico Occidental,Salime,71.13224137931034
+Cantábrico Occidental,Somiedo (Lagos),37.16546666666667
+Cantábrico Occidental,Tanes,78.70214559386973
+Cantábrico Oriental,Añarbe,76.81482758620689
+Cantábrico Oriental,Ibiur,82.54310344827586
+Cantábrico Oriental,Ordunte,82.00074712643678
+Cantábrico Oriental,San Antón,93.9080459770115
+Cuenca Mediterránea Andaluza,Benínar,13.046743295019157
+Cuenca Mediterránea Andaluza,Béznar,74.5645785440613
+Cuenca Mediterránea Andaluza,Casasola,52.687030651341
+Cuenca Mediterránea Andaluza,Charco Redondo,54.99270114942529
+Cuenca Mediterránea Andaluza,Concepción,71.4653448275862
+Cuenca Mediterránea Andaluza,Conde Guadalhorce,64.38795019157088
+Cuenca Mediterránea Andaluza,Cuevas de Almanzora,12.123256704980843
+Cuenca Mediterránea Andaluza,Guadalhorce-Guadalteba,71.65517241379311
+Cuenca Mediterránea Andaluza,Guadarranque,64.15243295019157
+Cuenca Mediterránea Andaluza,Limonero,46.858927203065136
+Cuenca Mediterránea Andaluza,Rules,74.9436398467433
+Cuenca Mediterránea Andaluza,"Viñuela, La",52.25471264367816
+Cuencas Internas de Cataluña,Boadella,65.33501915708811
+Cuencas Internas de Cataluña,Catllar,3.544090909090909
+Cuencas Internas de Cataluña,La Baells,82.37070881226055
+Cuencas Internas de Cataluña,La Llosa del Cavall,81.669061302682
+Cuencas Internas de Cataluña,Riudecanyes,50.842911877394634
+Cuencas Internas de Cataluña,Sant Pons,93.51900383141762
+Cuencas Internas de Cataluña,Sau,71.53268199233716
+Cuencas Internas de Cataluña,Susqueda,79.85613026819924
+Cuencas Internas del País Vasco,Ibai-Eder,81.36706896551725
+Cuencas Internas del País Vasco,Urkulu,84.11877394636015
+Duero,"Agavanzal, Nª Sª de",83.33913793103449
+Duero,Aguilar,55.39666666666667
+Duero,Aldeadávila,94.04854406130268
+Duero,Almendra,65.5173754789272
+Duero,Arlanzón,79.37145593869732
+Duero,Barrios de Luna,56.6611877394636
+Duero,Burgomillodo,72.23582375478927
+Duero,Camporredondo,52.750153256704984
+Duero,Casares de Arbas,62.327547892720304
+Duero,Castro,90.43181992337165
+Duero,Castro de las Cogotas,55.60114942528735
+Duero,Cernadilla,48.20293103448276
+Duero,Cervera,61.894750957854406
+Duero,Compuerto,57.50519157088122
+Duero,Cuerda del Pozo,66.47808429118774
+Duero,Linares del Arroyo,61.86080459770115
+Duero,"Pontón Alto, El",88.12249042145595
+Duero,Porma-(Juan Benet),58.99944444444444
+Duero,Puente Porto,27.36950191570881
+Duero,Requejada,47.05699233716475
+Duero,Riaño,62.87570881226054
+Duero,Ricobayo,56.09996168582376
+Duero,Rábanos,100.0
+Duero,San José,100.0
+Duero,Santa Teresa,68.06404214559387
+Duero,Saucelle,97.17699233716475
+Duero,Serones,63.25013409961686
+Duero,Valparaíso,89.96850574712643
+Duero,"Vencías, Las",93.79310344827586
+Duero,Villagonzalo,100.0
+Duero,Villalcampo,93.28999999999999
+Duero,Villameca,54.39655172413793
+Duero,Águeda,60.75701149425287
+Duero,Úzquiza,64.7689846743295
+Ebro,Albiña,71.7624521072797
+Ebro,Alcañiz (Estanca),72.22103448275861
+Ebro,Alloz,62.82931034482759
+Ebro,Barasona,69.22908045977012
+Ebro,Baserca,59.01241379310345
+Ebro,Búbal,50.364980842911876
+Ebro,Calanda,57.27952107279693
+Ebro,Camarasa,71.0367049808429
+Ebro,Canelles,65.98340996168584
+Ebro,Caspe,52.49727969348659
+Ebro,Cavallers,61.68582375478927
+Ebro,Certescáns,75.52681992337165
+Ebro,Ciurana,66.95490421455939
+Ebro,Cueva Foradada,63.06992337164751
+Ebro,Ebro,68.1533141762452
+Ebro,Enciso,45.78661538461539
+Ebro,Escales,72.92793103448275
+Ebro,Eúgui,76.04340996168582
+Ebro,González Lacasa,58.64942528735632
+Ebro,"Grado, El",86.05524904214559
+Ebro,Guiamets,54.13793103448276
+Ebro,Ip,54.02298850574713
+Ebro,Irabia,62.438141762452105
+Ebro,Itoiz,59.69084291187739
+Ebro,Lanuza,55.67998084291188
+Ebro,Las Fitas,78.32986486486486
+Ebro,Laverné,69.82031531531531
+Ebro,Lechago,54.191384615384614
+Ebro,Llauset,65.81076628352491
+Ebro,Loteta (La),33.19706896551724
+Ebro,Maidevera,60.93869731800766
+Ebro,Mansilla,62.30885057471264
+Ebro,Mediano,59.813486590038316
+Ebro,Mequinenza,77.80162835249041
+Ebro,Moneva,29.21455938697318
+Ebro,Monteagudo,44.67432950191571
+Ebro,Montearagón,22.780153846153848
+Ebro,Nagore,92.0
+Ebro,Oliana,69.07139846743294
+Ebro,Pajares,55.24902298850575
+Ebro,Parras (Las),80.0
+Ebro,Pena,68.16737547892721
+Ebro,"Peña, La",77.02444444444446
+Ebro,Puente de Santolea,81.08099099099098
+Ebro,Rialb,71.42402298850574
+Ebro,Ribarroja,95.88526819923372
+Ebro,Sallente,33.49296934865901
+Ebro,San Bartolomé,29.567452107279696
+Ebro,San Lorenzo,90.0
+Ebro,San Salvador,87.11830769230768
+Ebro,Santa Ana,63.02526819923372
+Ebro,Santa María de Belsué,13.763927203065133
+Ebro,Santolea,48.77189655172414
+Ebro,Sistema Aguas Limpias,48.09551724137931
+Ebro,Sistema Alto Caldarés,41.591819923371645
+Ebro,Sistema Capdella,60.0
+Ebro,Sistema Escarra,59.84674329501916
+Ebro,Sistema Lagos Espot,89.21455938697318
+Ebro,Sistema Valle de Arán,53.044808429118774
+Ebro,Sobrón,88.40996168582376
+Ebro,Sotonera,71.28296934865901
+Ebro,Terradets,94.73785440613028
+Ebro,Terroba,12.5
+Ebro,"Torcas, Las",57.607547892720305
+Ebro,"Tranquera, La",59.400881226053635
+Ebro,Tremp ó Talárn,68.81568965517242
+Ebro,Ullivarri,78.02741379310345
+Ebro,Urdalur,74.52708812260536
+Ebro,Urdiceto,39.84674329501916
+Ebro,Urrunaga,70.9611877394636
+Ebro,Vadiello,69.33668582375479
+Ebro,"Val, El",74.08191570881226
+Ebro,Valdepatao,15.644153846153849
+Ebro,Yesa,62.53641762452107
+Galicia Costa,Barrie de la Maza,50.04312260536398
+Galicia Costa,Cecebre,68.8873754789272
+Galicia Costa,Eiras,87.37344827586207
+Galicia Costa,Eume,83.56977011494253
+Galicia Costa,Fervenza,61.88308429118774
+Galicia Costa,"Forcadas, As",78.63316091954023
+Galicia Costa,Portodemouros,72.97239463601532
+Galicia Costa,"Ribeira, A",78.12187739463602
+Galicia Costa,Riocobo,68.83946360153256
+Galicia Costa,Sta Uxia,77.02183908045977
+Galicia Costa,Villagudín,80.99162835249042
+Guadalete-Barbate,Almodóvar,58.77952107279693
+Guadalete-Barbate,Arcos de la Frontera,94.69252873563218
+Guadalete-Barbate,Barbate,57.167030651340994
+Guadalete-Barbate,Bornos,51.33141762452107
+Guadalete-Barbate,Celemín,57.191513409961686
+Guadalete-Barbate,Guadalcacín II,62.108314176245216
+Guadalete-Barbate,"Hurones, Los",66.72785440613028
+Guadalete-Barbate,Zahara-El Gastor,74.1845785440613
+Guadalquivir,Agrio (Aznalcollar),68.43869731800767
+Guadalquivir,Aguascebas,77.26754789272032
+Guadalquivir,Alcalá del Río,85.0
+Guadalquivir,Aracena,73.54352490421456
+Guadalquivir,Arenoso,50.935153256704986
+Guadalquivir,Bembézar,62.44252873563219
+Guadalquivir,Bermejales,61.22844827586207
+Guadalquivir,"Bolera, La",49.83752873563218
+Guadalquivir,"Breña II, La",52.88159003831417
+Guadalquivir,Cala,48.86333333333333
+Guadalquivir,Canales,65.66812260536399
+Guadalquivir,Cantillana,100.0
+Guadalquivir,"Carpio, El",96.15076923076923
+Guadalquivir,Colomera,59.36302681992337
+Guadalquivir,Cordobilla,100.0
+Guadalquivir,Cubillas,69.33892720306513
+Guadalquivir,Derivación Retortillo,99.03846153846153
+Guadalquivir,Doña Aldonza,100.0
+Guadalquivir,El Portillo,83.59019157088123
+Guadalquivir,Encinarejo,81.53884615384617
+Guadalquivir,"Fernandina, La",56.32961685823755
+Guadalquivir,Francisco Abellán,52.82726053639846
+Guadalquivir,Fresneda,68.90701149425287
+Guadalquivir,Gergal,81.23714559386973
+Guadalquivir,Giribaile,47.55300766283525
+Guadalquivir,Guadalmellato,64.69521072796935
+Guadalquivir,Guadalmena,62.30421455938697
+Guadalquivir,Guadalén,53.19396551724138
+Guadalquivir,Hornachuelos,96.15461538461538
+Guadalquivir,Huesna,71.90145593869731
+Guadalquivir,Iznájar,57.48417624521073
+Guadalquivir,José Torán,58.54331417624521
+Guadalquivir,Jándula,53.47544061302682
+Guadalquivir,Malpasillo ( Jauja ),100.0
+Guadalquivir,Marmolejo,91.53846153846153
+Guadalquivir,Martín Gonzalo,70.3277969348659
+Guadalquivir,"Melonares, Los",85.25402298850574
+Guadalquivir,"Minilla, La",76.76055555555556
+Guadalquivir,Montoro,76.54252873563217
+Guadalquivir,Negratín,54.408371647509576
+Guadalquivir,Pedro Marín,96.7626923076923
+Guadalquivir,"Pintado, El",68.4894827586207
+Guadalquivir,Puebla de Cazalla,40.57906130268199
+Guadalquivir,Puente Nuevo,55.422279693486594
+Guadalquivir,Quiebrajano,57.25653256704981
+Guadalquivir,Quéntar,70.92176245210727
+Guadalquivir,Retortillo,65.95722222222221
+Guadalquivir,Rumblar,57.42266283524904
+Guadalquivir,San Clemente,18.65852490421456
+Guadalquivir,San Rafael de Navallana,54.11791187739463
+Guadalquivir,Sierra Boyera,66.26011494252873
+Guadalquivir,Siles,72.2506204379562
+Guadalquivir,Torre del Águila,36.94011494252873
+Guadalquivir,Tranco de Beas,61.57996168582376
+Guadalquivir,Vadomojón,55.73461685823755
+Guadalquivir,Víboras,48.74971264367816
+Guadalquivir,Yeguas,54.82766283524904
+Guadalquivir,Zocueca,20.0
+Guadalquivir,Zufre,77.59402298850576
+Guadiana,"Aguijón, El",89.27310344827586
+Guadiana,Alange,50.94289272030651
+Guadiana,Alcollarín,25.0
+Guadiana,Andévalo,74.66174603174603
+Guadiana,Boquerón,75.31952107279693
+Guadiana,Brovales,77.1198275862069
+Guadiana,Búrdalo,18.99
+Guadiana,Canchales,69.45118773946359
+Guadiana,Cancho del Fresno,73.28201149425287
+Guadiana,Castilseras,88.51985559566786
+Guadiana,Chanza,58.6189846743295
+Guadiana,Cijara,54.12869731800766
+Guadiana,Cornalbo,10.639827586206897
+Guadiana,Cubilar,37.911877394636015
+Guadiana,El Vicario,48.46722222222222
+Guadiana,García de Sola,56.48015325670498
+Guadiana,Gargáligas,68.87373563218391
+Guadiana,Gasset,42.975114942528734
+Guadiana,Horno Tejero,86.6139846743295
+Guadiana,La Cabezuela,56.30365900383141
+Guadiana,La Serena,56.606934865900385
+Guadiana,Llerena,80.54681992337166
+Guadiana,Los Molinos,86.08904214559388
+Guadiana,Montijo,89.15005747126438
+Guadiana,Nogales,83.02697318007664
+Guadiana,Orellana,72.44597701149426
+Guadiana,Peñarroya,78.20647509578544
+Guadiana,Piedra Aguda,66.73850574712644
+Guadiana,Proserpina,83.65900383141762
+Guadiana,Pto. Vallehermoso,76.59934865900384
+Guadiana,Ruecas,68.32984674329502
+Guadiana,Sierra Brava,65.33714559386972
+Guadiana,Tentudia,68.46743295019157
+Guadiana,Torre de Abrahán,41.645114942528735
+Guadiana,Valuengo,74.3103448275862
+Guadiana,Vega del Jabalón,49.76356321839081
+Guadiana,Villalba de los Barros,72.13076923076923
+Guadiana,Villar del Rey,68.67396551724137
+Guadiana,Zújar,81.29678160919539
+Júcar,Alarcón,50.18275862068966
+Júcar,Algar,3.225344827586207
+Júcar,Amadorio,42.40900383141762
+Júcar,Arenós,42.222318007662835
+Júcar,Arquillo de San Blas,71.06310344827587
+Júcar,Bellús,17.727145593869732
+Júcar,Benagéber,51.12001915708812
+Júcar,Beniarrés,53.00143678160919
+Júcar,Buseo,40.27777777777778
+Júcar,Contreras,36.495862068965515
+Júcar,Cortes II,91.30224137931036
+Júcar,El Naranjero,71.83946360153256
+Júcar,Escalona,4.943582375478926
+Júcar,Forata,25.422662835249046
+Júcar,Guadalest,54.657452107279695
+Júcar,La Muela,56.752873563218394
+Júcar,La Toba,52.72030651340996
+Júcar,Loriguilla,29.60155172413793
+Júcar,María Cristina,29.66241379310345
+Júcar,Regajo,63.37735632183909
+Júcar,Sichar,68.26181992337165
+Júcar,Tous - La Ribera,28.549674329501915
+Júcar,Ulldecona,50.76687739463601
+Miño - Sil,Albarellos,42.60442528735632
+Miño - Sil,Bao,72.58049808429118
+Miño - Sil,Belesar,58.78628352490421
+Miño - Sil,Bárcena,59.357241379310345
+Miño - Sil,"Campañana, La",64.10793103448275
+Miño - Sil,Castrelo,86.72070881226054
+Miño - Sil,Cenza,60.076628352490424
+Miño - Sil,Chandrexa,58.33484674329502
+Miño - Sil,"Conchas, Las",57.18869731800766
+Miño - Sil,Edrada-Mao,53.18831417624521
+Miño - Sil,Frieira,88.80159003831417
+Miño - Sil,Guístolas,65.05747126436782
+Miño - Sil,Matalavilla,53.66026819923372
+Miño - Sil,Montefurado,92.29885057471265
+Miño - Sil,"Peares, Os",96.10557471264367
+Miño - Sil,Peñarrubia,85.62032567049809
+Miño - Sil,"Portas, Las",69.12982758620689
+Miño - Sil,Prada,72.28785440613028
+Miño - Sil,Pías (San Agustín),62.95019157088122
+Miño - Sil,"Rozas, Las",51.35467432950191
+Miño - Sil,Salas,44.398927203065135
+Miño - Sil,San Martiño,89.46360153256705
+Miño - Sil,San Pedro,76.11519157088122
+Miño - Sil,San Sebastián,54.577030651341
+Miño - Sil,San. Estevo,84.78919540229884
+Miño - Sil,Santa Eulalia,77.77777777777777
+Miño - Sil,Sequeiros,90.96224137931034
+Miño - Sil,Velle,79.14038314176246
+Miño - Sil,Vilasouto,57.36166666666667
+Segura,Alfonso XIII,24.63477011494253
+Segura,Algeciras,36.80325670498084
+Segura,Anchuricas,88.08906130268198
+Segura,Argos,68.85057471264368
+Segura,Camarillas,46.55687739463601
+Segura,Cenajo,48.58109195402299
+Segura,"Cierva, La",53.44833333333334
+Segura,Crevillente,41.42375478927203
+Segura,Fuensanta,37.22130268199234
+Segura,La Pedrera,41.32164750957855
+Segura,Puentes,33.304406130268205
+Segura,Santomera,10.46860153256705
+Segura,Taibilla,51.91620689655172
+Segura,Talave,48.19406130268199
+Segura,Valdeinfierno,5.815957854406131
+Tajo,Aceña,63.40189655172414
+Tajo,Alcorlo,44.818045977011494
+Tajo,Alcántara,66.83515325670497
+Tajo,Almoguera,84.64310344827585
+Tajo,"Atance, El",37.756149425287354
+Tajo,"Atazar, El",77.94726053639847
+Tajo,Azután,68.17155172413794
+Tajo,Baños,68.48885057471264
+Tajo,Beleña,64.87011494252873
+Tajo,Bolarque,84.1683908045977
+Tajo,Borbollon,58.307260536398466
+Tajo,Buendía,20.855747126436782
+Tajo,Burguillo - Puente Nuevo,59.98718390804598
+Tajo,Castrejón,93.3638888888889
+Tajo,"Castro, El",26.245210727969347
+Tajo,Cazalegas,98.02896551724139
+Tajo,Cedillo,93.29396551724138
+Tajo,Cáceres - Guadiloba,57.89272030651341
+Tajo,Entrepeñas,31.55318007662835
+Tajo,Finisterre,17.266532567049808
+Tajo,Gabriel y Galán,52.305402298850574
+Tajo,Guajaraz,71.8498275862069
+Tajo,Guijo de Granadilla,87.71231800766284
+Tajo,"Jarosa, La",65.18768199233716
+Tajo,Jerte - Plasencia,67.95009578544061
+Tajo,Molino de Chincha,92.62362068965517
+Tajo,Navacerrada,60.39804597701149
+Tajo,Navalcán,72.71249042145594
+Tajo,Navamuño,64.2860153256705
+Tajo,"Pardo, El",32.384214559386976
+Tajo,Picadas,96.11561302681991
+Tajo,Pinilla,71.38034482758621
+Tajo,Portaje,60.39490421455939
+Tajo,"Portiña, La",37.39463601532567
+Tajo,Puentes Viejas,78.33467432950191
+Tajo,Pálmaces,52.73760536398467
+Tajo,Riosequillo,77.13793103448276
+Tajo,Rivera de Gata,65.47854406130269
+Tajo,Rosarito,61.7722030651341
+Tajo,Salor,47.61883141762452
+Tajo,San Juan,60.95421455938697
+Tajo,Santillana,73.67252873563218
+Tajo,"Tajera, La",36.63783524904215
+Tajo,Torcón,42.69295019157089
+Tajo,Torrejón (Tajo - Tietar),87.45093869731801
+Tajo,"Vado, El",48.381743295019156
+Tajo,Valdecañas,54.92091954022989
+Tajo,Valdeobispo,92.61578544061304
+Tajo,Valmayor,67.60588122605364
+Tajo,"Vellón,El-(Pedrezuela)",69.40459770114941
+Tajo,"Villar, El",86.61434865900384
+"Tinto, Odiel y Piedras",Corumbel Bajo,61.161570881226055
+"Tinto, Odiel y Piedras",Jarrama,83.65444444444445
+"Tinto, Odiel y Piedras",Los Machos,67.065938697318
+"Tinto, Odiel y Piedras",Odiel,87.59578544061303
+"Tinto, Odiel y Piedras",Olivargas,98.45400383141762
+"Tinto, Odiel y Piedras",Piedras,65.54630268199233
+"Tinto, Odiel y Piedras",Sancho,82.7566858237548
