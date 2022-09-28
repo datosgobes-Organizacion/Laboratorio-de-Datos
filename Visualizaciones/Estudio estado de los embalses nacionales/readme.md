@@ -95,14 +95,23 @@ Durante el preprocesamiento es necesario realizar un análisis exploratorio de l
 Los pasos que se siguen en esta fase de preprocesamiento son los siguientes: 
 
 * Instalación y carga de librerías
+
 * Carga de archivos de datos de origen
+
 * Modificación y ajuste de las variables
+
 * Detención y tratamiento de datos ausentes (NAs)
+
 * Generación de nuevas variables
+
 * Creación de tabla para visualización "Evolución histórica de la reserva hídrica entre los años 2012 y 2022" 
+
 * Creación de tabla para visualización "Reserva hídrica (hm3) entre los años 2012 y 2022" 
+
 * Creación de tabla para visualización "Reserva hídrica (%) entre los años 2012 y 2022" 
+
 * Creación de tabla para visualización "Evolución mensual de la reserva hídrica (hm3) para distintas series temporales" 
+
 * Guardado de las tablas con los datos preprocesados 
 
 Podrás reproducir este análisis, ya que el código fuente está disponible en este repositorio de GitHub. La forma de proporcionar el código es a través de un documento realizado sobre un Jupyter Notebook que una vez cargado en el entorno de desarrollo podrás ejecutar o modificar de manera sencilla. Debido al carácter divulgativo de este post y con el fin de favorecer el aprendizaje de lectores no especializados, el código no pretende ser el más eficiente, sino facilitar su comprensión por lo que posiblemente se te ocurrirán muchas formas de optimizar el código propuesto para lograr fines similares. ¡Te animamos a que lo hagas! 
@@ -121,74 +130,63 @@ Para abordar el proceso de diseño del conjunto de representaciones visuales de 
 
 ¡Vamos a buscar las respuestas viendo los datos! 
 
-
-
-6.1. Localización geográfica y principal información de cada embalse
+### Localización geográfica y principal información de cada embalse
 Esta representación visual se ha realizado teniendo en cuenta las coordenadas geográficas de los embalses y distinta información asociada a cada uno de ellos. Para ello se ha generado durante el preprocesamiento de datos la tabla “geo.csv” 
 
 Mediante un mapa de puntos geográficos se visualiza la localización de los embalses en el territorio nacional. 
 
 Una vez obtenido el mapa, pinchando en cada uno de los embalses podemos acceder a información complementaria sobre dicho embalse en la tabla inferior. También, mediante las pestañas despegables, aparece la opción de filtrar el mapa por demarcación hidrográfica y por embalse.
 
-Ver la visualización en pantalla completa
+[Ver la visualización en pantalla completa](https://datastudio.google.com/embed/reporting/83e0fdc1-a5f6-47f1-9709-05efff26b8da/page/p_g42o78ajwc)
 
 
-
-6.2. Reserva hídrica (hm3) entre los años 2012 y 2022
+### Reserva hídrica (hm3) entre los años 2012 y 2022
 Esta representación visual se ha realizado teniendo en cuenta la reserva hídrica (hm3) por embalse entre los años los años 2012 (inclusive) y 2022. Para ello se ha generado durante el preprocesamiento de datos la tabla “volumen.csv” 
 
 Mediante un gráfico de jerarquía rectangular se visualiza de forma intuitiva la importancia de cada embalse en cuanto a volumen embalsado dentro del conjunto nacional para el periodo temporal anteriormente indicado. 
 
 Una vez obtenido el gráfico, mediante las pestañas despegables, aparece la opción de filtrar la visualización por demarcación hidrográfica y por embalse. 
 
-Ver la visualización en pantalla completa
+[Ver la visualización en pantalla completa](https://datastudio.google.com/embed/reporting/0ed95c31-6d83-47d0-9619-e04f3bd037c2/page/NSZvC)
 
-
-
-6.3. Reserva hídrica (%) entre los años 2012 y 2022
+### Reserva hídrica (%) entre los años 2012 y 2022
 Esta representación visual se ha realizado teniendo en cuenta la reserva hídrica (%) por embalse entre los años 2012 (inclusive) y 2022. Para ello se ha generado durante el preprocesamiento de datos la tabla “porcentaje.csv” 
 
 Mediante un gráfico de barras se visualiza de forma intuitiva el porcentaje de llenado de cada embalse para el periodo temporal anteriormente indicado. 
 
 Una vez obtenido el gráfico, mediante las pestañas despegables, aparece la opción de filtrar la visualización por demarcación hidrográfica y por embalse. 
 
-Ver la visualización en pantalla completa
+[Ver la visualización en pantalla completa](https://datastudio.google.com/embed/reporting/facb108e-ea69-439b-baa9-88570c133688/page/p_bjgvew5iwc)
 
-
-
-6.4. Evolución histórica de la reserva hídrica entre los años 2012 y 2022
+### Evolución histórica de la reserva hídrica entre los años 2012 y 2022
 Esta representación visual se ha realizado teniendo en cuenta los datos históricos de la reserva hídrica (hm3 y %) para todas las mediciones semanales registradas entre los años 2012(inclusive) y 2022. Para ello se ha generado durante el preprocesamiento de datos la tabla “lineas.csv” 
 
 Mediante gráficos de líneas y sus líneas de tendencia se visualiza la evolución temporal de la reserva hídrica (hm3 y %). 
 
 Una vez obtenido el gráfico, mediante las pestañas desplegables, podemos modificar la serie temporal, filtrar por demarcación hidrográfica y por embalse.
 
-Ver la visualización en pantalla completa
+[Ver la visualización en pantalla completa](https://datastudio.google.com/embed/reporting/7a6360f3-ecc8-4c66-b7d4-d61d089a2ef6/page/p_a7jor18iwc)
 
-
-
-6.5. Evolución mensual de la reserva hídrica (hm3) para distintas series temporales
+### Evolución mensual de la reserva hídrica (hm3) para distintas series temporales
 Esta representación visual se ha realizado teniendo en cuenta la reserva hídrica (hm3) de los distintos embalses desglosada por meses para distintas series temporales (cada uno de los años desde el 2012 hasta el 2022). Para ello se ha generado durante el preprocesamiento de datos la tabla “lineas_mensual.csv” 
 
 Mediante un gráfico de líneas se visualízala la reserva hídrica mes a mes para cada una de las series temporales. 
 
 Una vez obtenido el gráfico, mediante las pestañas desplegables, podemos filtrar por demarcación hidrográfica y por embalse. También tenemos la opción de elegir la serie o series temporales (cada uno de los años desde el 2012 hasta el 2022) que queremos visualizar mediante el icono que aparece en la parte superior derecha del gráfico. 
 
-Ver la visualización en pantalla completa
+[Ver la visualización en pantalla completa](https://datastudio.google.com/embed/reporting/46f3c462-4a38-40f6-8481-568a1a1316a9/page/p_noi5ybajwc)
 
 
 
-Volver al inicio
-
-7. Conclusiones
+## Conclusiones
 La visualización de datos es uno de los mecanismos más potentes para explotar y analizar el significado implícito de los datos, independientemente del tipo de dato y el grado de conocimiento tecnológico del usuario. Las visualizaciones nos permiten construir significado sobre los datos y la creación de narrativas basadas en la representación gráfica. En el conjunto de representaciones gráficas de datos que acabamos de implementar se puede observar lo siguiente: 
 
-Se observa una tendencia significativa en la disminución del volumen de agua embalsada por el conjunto de embalses nacionales entre los años 2012 y 2022. 
+* Se observa una tendencia significativa en la disminución del volumen de agua embalsada por el conjunto de embalses nacionales entre los años 2012 y 2022. 
 
-El año 2017 es el que presenta valores más bajos de porcentaje de llenado total de los embalses, llegando a ser este inferior al 45% en ciertos momentos del año. 
+* El año 2017 es el que presenta valores más bajos de porcentaje de llenado total de los embalses, llegando a ser este inferior al 45% en ciertos momentos del año. 
 
-El año 2013 es el que presenta valores más altos de porcentaje de llenado total de los embalses, llegando a ser este superior al 80% en ciertos momentos del año. 
+* El año 2013 es el que presenta valores más altos de porcentaje de llenado total de los embalses, llegando a ser este superior al 80% en ciertos momentos del año. 
 
-Cabe destacar que en las visualizaciones tienes la opción de filtrar por demarcación hidrográfica y por embalse. Te animamos a lo que lo hagas para sacar conclusiones más específicas de las demarcaciones hidrográficas y embalses que estés interesado. 
+* Cabe destacar que en las visualizaciones tienes la opción de filtrar por demarcación hidrográfica y por embalse. Te animamos a lo que lo hagas para sacar conclusiones más específicas de las demarcaciones hidrográficas y embalses que estés interesado. 
 
 Esperemos que esta visualización paso a paso te haya resultado útil para el aprendizaje de algunas técnicas muy habituales en el tratamiento y representación de datos abiertos. Volveremos para mostraros nuevas reutilizaciones. ¡Hasta pronto! 
