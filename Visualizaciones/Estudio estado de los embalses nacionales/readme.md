@@ -34,11 +34,11 @@ También se he realizado un filtrado para quedarnos con los datos correspondient
 
 
 ### Herramientas
-Para la realización del preprocesamiento de los datos se ha utilizado el lenguaje de programación Python desde el servicio cloud de Google Colab, que permite la ejecución de Notebooks de Jupyter.
+Para la realización del preprocesamiento de los datos se ha utilizado el lenguaje de programación Python desde el servicio cloud de [Google Colab](https://colab.research.google.com/), que permite la ejecución de [Notebooks de Jupyter](https://jupyter.org/).
 
 > Google Colab o también llamado Google Colaboratory, es un servicio gratuito en la nube de Google Research que permite programar, ejecutar y compartir código escrito en Python o R desde tu navegador, por lo que no requiere la instalación de ninguna herramienta o configuración.
 
-Para la creación de la visualización interactiva se ha usado la herramienta Google Data Studio.
+Para la creación de la visualización interactiva se ha usado la herramienta [Google Data Studio](https://datastudio.google.com/).
 
 > Google Data Studio es una herramienta online que permite realizar gráficos, mapas o tablas que pueden incrustarse en sitios web o exportarse como archivos. Esta herramienta es sencilla de usar y permite múltiples opciones de personalización.
 
@@ -48,7 +48,7 @@ Si quieres conocer más sobre herramientas que puedan ayudarte en el tratamiento
 ## Enriquecimiento de los datos
 Con la finalidad de aportar mayor información relacionada a cada una de las presas en el dataset con datos geoespaciales, se realiza un proceso de enriquecimiento de datos explicado a continuación. 
 
-Para ello vamos a utilizar una herramienta útil para este tipo de tarea, OpenRefine. Esta herramienta de código abierto permite realizar múltiples acciones de preprocesamiento de datos, aunque en esta ocasión la usaremos para llevar a cabo un enriquecimiento de nuestros datos mediante la incorporación de contexto enlazando automáticamente información que reside en el popular repositorio de conocimiento Wikidata. 
+Para ello vamos a utilizar una herramienta útil para este tipo de tarea, [OpenRefine](https://openrefine.org/). Esta herramienta de código abierto permite realizar múltiples acciones de preprocesamiento de datos, aunque en esta ocasión la usaremos para llevar a cabo un enriquecimiento de nuestros datos mediante la incorporación de contexto enlazando automáticamente información que reside en el popular repositorio de conocimiento [Wikidata](https://www.wikidata.org/wiki/Wikidata:Main_Page). 
 
 Una vez instalada la herramienta en nuestro ordenador, al ejecutarse se abrirá una aplicación web en el navegador, en caso de que eso no ocurriese, se accedería a dicha aplicación tecleando en la barra de búsqueda del navegador http://localhost:3333. 
 
@@ -64,12 +64,15 @@ Figura 2 - Creación de un proyecto en OpenRefine
 
 ### Paso 3: Enlazado (o reconciliación, usando la nomenclatura de OpenRefine) con fuentes externas.
 OpenRefine nos permite enlazar recursos que tengamos en nuestro CSV con fuentes externas como Wikidata. Para ello se deben realizar las siguientes acciones (pasos 3.1 a 3.3):
+
 Paso 3.1: Identificación de las columnas a enlazar. Habitualmente este paso suele estar basado en la experiencia del analista y su conocimiento de los datos que se representan en Wikidata. Como consejo, habitualmente se podrán reconciliar o enlazar aquellas columnas que contengan información de carácter más global o general como nombres de países, calles, distritos, etc., y no se podrán enlazar aquellas columnas como coordenadas geográficas, valores numéricos o taxonomías cerradas (tipos de calles, por ejemplo). En este ejemplo, hemos encontrado la columna NOMBRE que contiene el nombre de cada embalse que puede servir como identificador único de cada ítem y puede ser un buen candidato para enlazar.  
+
 Paso 3.2: Comienzo de la reconciliación. Comenzamos la reconciliación como se indica en la figura 3 y seleccionamos la única fuente que estará disponible: Wikidata(en). Después de hacer clic en Start Reconciling, automáticamente comenzará a buscar la clase del vocabulario de Wikidata que más se adecue basado en los valores de nuestra columna. 
  
 Figura 3 – Inicio del proceso de reconciliación de la columna NOMBRE en OpenRefine 
 
 Paso 3.3: Selección de la clase de Wikidata. En este paso obtendremos los valores de la reconciliación. En este caso como valor más probable, seleccionamos el valor de la propiedad  “reservoir” cuya descripción se puede ver en https://www.wikidata.org/wiki/Q131681, que corresponde a la descripción de un “lago artificial para acumular agua”. Únicamente habrá que pulsar otra vez en Start Reconciling. 
+
 OpenRefine nos ofrece la posibilidad de mejorar el proceso de reconciliación agregando algunas características que permitan orientar el enriquecimiento de la información con mayor precisión. Para ello ajustamos la propiedad P4568 cuya descripción se corresponde con el identificador de un embalse en España, en el SNCZI-Inventario de Presas y Embalses, como se observa en la figura 4. 
 
 Figura 4 - Selección de la clase de Wikidata que mejor representa los valores de la columna NOMBRE 
@@ -123,10 +126,13 @@ Una vez hemos realizado un preprocesamiento de los datos, vamos con las visualiz
 
 Para abordar el proceso de diseño del conjunto de representaciones visuales de los datos, el primer paso es plantearnos las preguntas que queremos resolver. Proponemos las siguientes: 
 
-*¿Cuál es la localización de los embalses dentro del territorio nacional? 
-*¿Qué embalses son los de mayor y menor aporte de volumen de agua embalsada (reserva hídrica en hm3) al conjunto del país? 
-*¿Qué embalses poseen el mayor y menor porcentaje de llenado (reserva hídrica en %)? 
-*¿Cuál es la tendencia en la evolución de la reserva hídrica en los últimos años? 
+* ¿Cuál es la localización de los embalses dentro del territorio nacional? 
+
+* ¿Qué embalses son los de mayor y menor aporte de volumen de agua embalsada (reserva hídrica en hm3) al conjunto del país? 
+
+* ¿Qué embalses poseen el mayor y menor porcentaje de llenado (reserva hídrica en %)? 
+
+* ¿Cuál es la tendencia en la evolución de la reserva hídrica en los últimos años? 
 
 ¡Vamos a buscar las respuestas viendo los datos! 
 
