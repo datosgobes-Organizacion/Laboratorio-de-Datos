@@ -78,12 +78,12 @@ OpenRefine nos ofrece la posibilidad de mejorar el proceso de reconciliación ag
 Figura 4 - Selección de la clase de Wikidata que mejor representa los valores de la columna NOMBRE 
 
 ### Paso 4: Generar una nueva columna con los valores reconciliados o enlazados.
-Para ello debemos pulsar en la columna NOMBRE e ir a “Edit Column → Add column based in this column”, dónde se mostrará un texto en la que tendremos que indicar el nombre de la nueva columna (en este ejemplo podría ser WIKIDATA_EMBALSE). En la caja de expresión deberemos indicar: “http://www.wikidata.org/entity/”+cell.recon.match.id y los valores aparecen como se previsualiza en la Figura 6.  “http://www.wikidata.org/entity/” se trata de una cadena de texto fija para representar las entidades de Wikidata, mientras el valor reconciliado de cada uno de los valores lo obtenemos a través de la instrucción cell.recon.match.id, es decir, cell.recon.match.id(“ALMODOVAR”) = Q5369429. 
+Para ello debemos pulsar en la columna NOMBRE e ir a “Edit Column → Add column based in this column”, dónde se mostrará un texto en la que tendremos que indicar el nombre de la nueva columna (en este ejemplo podría ser WIKIDATA_EMBALSE).
+
+En la caja de expresión deberemos indicar: “http://www.wikidata.org/entity/”+cell.recon.match.id y los valores aparecen como se previsualiza en la Figura 6.  “http://www.wikidata.org/entity/” se trata de una cadena de texto fija para representar las entidades de Wikidata, mientras el valor reconciliado de cada uno de los valores lo obtenemos a través de la instrucción cell.recon.match.id, es decir, cell.recon.match.id(“ALMODOVAR”) = Q5369429. 
 Mediante la operación anterior, se generará una nueva columna con dichos valores. Con el fin de comprobar que se ha realizado correctamente, haciendo clic en una de las celdas de la nueva columna, está debería conducir a una página web de Wikidata con información del valor reconciliado.  
 
 El proceso lo repetimos para añadir otro tipo de información enriquecida como la referencia en Google u OpenStreetMap. 
-
-Interfaz de usuario gráfica, Texto, Aplicación, Correo electrónicoDescripción generada automáticamente 
 
 Figura 5 - Generación de las entidades de Wikidata gracias a la reconciliación a partir de una nueva columna 
 
