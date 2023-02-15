@@ -1,6 +1,6 @@
 ## Contenido
 
-Este carpeta contiene los archivos de datos que se han utilizado en el ejercicio práctico 
+Este carpeta contiene los conjuntos de datos que se han utilizado en el ejercicio práctico 
 
 -	[Miradores en espacios naturales](https://datos.gob.es/es/catalogo/a07002862-miradores-en-espacios-naturales1) 
 - [Observatorios en espacios naturales](https://datos.gob.es/es/catalogo/a07002862-observatorios-en-espacios-naturales1) 
