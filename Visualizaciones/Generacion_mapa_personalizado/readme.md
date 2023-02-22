@@ -137,3 +137,11 @@ En este punto, una vez creado el mapa personalizado, explicaremos diversas funci
 * Rutas: Podemos crear una copia del mapa sobre la que añadir nuestros recorridos personalizados.  
 En las opciones del menú lateral izquierdo, seleccionamos “copiar mapa”. Una vez copiado el mapa, mediante el símbolo de añadir indicaciones, situado debajo de la barra buscador, generaremos una nueva capa. A esta capa podremos indicarle dos o más puntos, junto al medio de transporte y nos creará el trazado junto a las indicaciones de trayecto. 
 * Mapa inmersivo en 3D: Mediante el símbolo de opciones que aparece en el menú lateral, podemos acceder a Google Earth, desde donde podemos realizar una exploración del mapa inmersiva en 3D, destacando el poder observar la altitud de los distintos puntos de interés. También puedes acceder mediante el siguiente enlace.
+
+
+## 7. Conclusiones del ejercicio
+La visualización de datos es uno de los mecanismos más potentes para explotar y analizar el significado implícito de los datos. Cabe destacar la vital importancia que los datos geográficos tienen en el sector del turismo, lo cual hemos podido comprobar en este ejercicio. 
+
+Como resultado, hemos desarrollado un mapa interactivo con información aportada por los datos abiertos enriquecidos (Linked Data), la cual hemos personalizado según nuestros intereses. 
+
+Esperemos que esta visualización paso a paso te haya resultado útil para el aprendizaje de algunas técnicas muy habituales en el tratamiento y representación de datos abiertos. Volveremos para mostraros nuevas reutilizaciones. ¡Hasta pronto! 
