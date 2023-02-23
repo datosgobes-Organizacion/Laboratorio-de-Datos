@@ -89,33 +89,56 @@ Una vez instalada la herramienta en nuestro ordenador, al ejecutarse se abrirá 
 A continuación, se detallan los pasos a seguir. 
 
 * Paso 1: 
-Carga del CSV en el sistema (Figura 1). En esta caso, el conjunto de datos “Registro de alojamientos hoteleros”. 
+Carga del CSV en el sistema (Figura 1). En esta caso, el conjunto de datos “Registro de alojamientos hoteleros”.
+
+[Figura 1. Carga de archivo CSV en OpenRefine](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/Generacion_mapa_personalizado/Imagenes/OpenRefine1.PNG)
 
 * Paso 2: 
 Creación del proyecto a partir del CSV cargado (Figura 2). OpenRefine se gestiona mediante proyectos (cada CSV subido será un proyecto), que se guardan en el ordenador dónde se esté ejecutando OpenRefine para un posible uso posterior. En este paso debemos dar un nombre al proyecto y algunos otros datos, como el separador de columnas, aunque lo más habitual es que estos últimos ajustes se rellenen automáticamente. 
+
+[Figura 2. Creación de un proyecto en OpenRefine](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/Generacion_mapa_personalizado/Imagenes/OpenRefine2.PNG)
 
 * Paso 3: 
 Enlazado (o reconciliación, usando la nomenclatura de OpenRefine) con fuentes externas. OpenRefine nos permite enlazar recursos que tengamos en nuestro CSV con fuentes externas como Wikidata. Para ello se deben realizar las siguientes acciones: 
 Identificación de las columnas a enlazar. Habitualmente este paso suele estar basado en la experiencia del analista y su conocimiento de los datos que se representan en Wikidata. Como consejo, de forma genérica se podrán reconciliar o enlazar aquellas columnas que contengan información de carácter más global o general como nombres de países, calles, distritos, etc., y no se podrán enlazar aquellas columnas como coordenadas geográficas, valores numéricos o taxonomías cerradas (tipos de calles, por ejemplo). En este ejemplo, disponemos de la columna “municipios” que contiene el nombre de los municipios españoles. 
 Comienzo de la reconciliación. (Figura 3) Comenzamos la reconciliación y seleccionamos la fuente por defecto que estará disponible: Wikidata(en). Después de hacer clic en Start Reconciling, automáticamente comenzará a buscar la clase del vocabulario de Wikidata que más se adecue basado en los valores de nuestra columna.
+
+[Figura 3. Selección de la clase que mejor representa los valores de la columna "municipio"](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/Generacion_mapa_personalizado/Imagenes/OpenRefine3.PNG)
+
 Obtención de los valores de la reconciliación. OpenRefine nos ofrece la posibilidad de mejorar el proceso de reconciliación agregando algunas características que permitan orientar el enriquecimiento de la información con mayor precisión. 
 
 Paso 4:
 Generar una nueva columna con los valores reconciliados o enlazados. (Figura 4) Para ello debemos pulsar en la columna “municipio” e ir a “Edit Column → Add column based in this column”, dónde se mostrará un texto en la que tendremos que indicar el nombre de la nueva columna (en este ejemplo podría ser “wikidata”). En la caja de expresión deberemos indicar: “http://www.wikidata.org/entity/”+cell.recon.match.id y los valores aparecen como se previsualiza en la Figura.  “http://www.wikidata.org/entity/” se trata de una cadena de texto fija para representar las entidades de Wikidata, mientras el valor reconciliado de cada uno de los valores lo obtenemos a través de la instrucción cell.recon.match.id, es decir, cell.recon.match.id(“Adanero”) = Q1404668 
 Mediante la operación anterior, se generará una nueva columna con dichos valores. Con el fin de comprobar que se ha realizado correctamente, haciendo clic en una de las celdas de la nueva columna, está debería conducir a una página web de Wikidata con información del valor reconciliado.  
 
+[Figura 4. Generación de nueva columna con valores reconciliados](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/Generacion_mapa_personalizado/Imagenes/OpenRefine4.PNG)
+
 * Paso 5:
 El proceso lo repetimos modificando en el paso 4 el “Edit Column → Add column based in this column” por “Add columns from reconciled values” (Figura 5). De esta forma, podremos elegir la propiedad de la columna reconciliada.  
 En este ejercicio hemos elegido la propiedad “image” con identificador P18 y la propiedad “population” con identificador P1082. No obstante, podríamos añadir todas las propiedades que consideremos útiles, como el número de habitantes, el listado de monumentos de interés, etc. Cabe destacar que al igual que enriquecemos los datos con Wikidata, podemos hacerlo con otros servicios de reconciliación.
 En el caso de la propiedad “image”, debido a la visualización, queremos que el valor de las celdas tenga forma de link, por lo que hemos realizado varios ajustes. Estos ajustes han sido la generación de varias columnas según los valores reconciliados, adecuación de las columnas mediante comandos en lenguaje GREL (lenguaje propio de OpenRefine) y unión de los diferentes valores de ambas columnas. Puedes consultar estos ajustes y más técnicas para mejorar tu manejo de OpenRefine y adaptarlo a tus necesidades en el siguiente User Manual. 
 
+[Figura 5. Elección propiedad para reconciliación](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/Generacion_mapa_personalizado/Imagenes/OpenRefine5.PNG)
+
 ## 6. Visualización del mapa
 ### 6.1 Generación del mapa con "Google My Maps"
 * Iniciamos sesión con una cuenta Google y vamos a "Google My Maps", teniendo acceso de forma gratuita sin tener que descargar ningún tipo de software. 
 * Importamos las tablas de datos preprocesados, uno por cada nueva capa que añadimos al mapa. Google My Maps permite importar archivos CSV, XLSX, KML y GPX (Figura 6), los cuales deberán tener asociada información geográfica. Para realizar este paso, primero se debe crear una capa nueva desde el menú de opciones lateral.
+
+[Figura 6. Importación de archivos en "Google My Maps"](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/Generacion_mapa_personalizado/Imagenes/MyMaps1.PNG)
+
 * En este caso práctico, importaremos tablas de datos preprocesados que contienen una variable con la latitud y otra con la longitud. Esta información geográfica se reconocerá automáticamente. My Maps también reconoce direcciones, códigos postales, países, ...
+
+[Figura 7. Selección columnas con valores de posición](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/Generacion_mapa_personalizado/Imagenes/MyMaps2.PNG)
+
 * Mediante la opción de editar estilo que aparece en el menú lateral izquierdo, en cada una de las capas, podemos personalizar los pines, editando el color y su forma.
+
+[Figura 8. Edicción de pines de posición](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/Generacion_mapa_personalizado/Imagenes/MyMaps3.PNG)
+
 * Por último, podemos elegir el mapa base que queremos visualizar en la parte inferior de la barra lateral de opciones. 
+
+[Figura 9. Selección de mapa base](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/Generacion_mapa_personalizado/Imagenes/MyMaps4.PNG)
+
 Si quieres conocer más sobre los pasos para la generación de mapas con “Google My Maps”, consulta el siguiente [tutorial paso a paso.](https://www.google.com/earth/outreach/learn/visualize-your-data-on-a-custom-map-using-google-my-maps/) 
 
 ### 6.2 Personalización de la información a mostrar en el mapa
@@ -127,17 +150,26 @@ Durante el preprocesamiento de las tablas de datos, hemos realizado un filtrado 
 * En el conjunto de datos perteneciente a los refugios de los espacios naturales, la información a mostrar para cada registro es el nombre, las observaciones, la señalización, el acceso y la posición (latitud/longitud). Dado que los refugios pueden encontrarse en estados muy diferentes y que algunos registros no ofrecen información en el campo “observaciones”, hemos decidido filtrar para que nos muestre solamente aquellos que tengan información en dicho campo. 
 * En el conjunto de datos perteneciente a las áreas recreativas de los espacios naturales, la información a mostrar para cada registro es el nombre, las observaciones, la señalización, el acceso y la posición (latitud/longitud).  Hemos decidido filtrar para que nos muestre solamente aquellos que tengan información en los campos de “observaciones” y “acceso”. 
 * En el conjunto de datos perteneciente a los alojamientos, la información a mostrar para cada registro es el nombre, tipo de establecimiento, categoría, municipio, web, teléfono y la posición (latitud/longitud). Hemos filtrado el “tipo” de establecimiento para que nos muestre solamente los que están categorizados como alojamientos de turismo rural y hemos filtrado para que nos muestre los que son de 2 estrellas. 
-* 
 A continuación, tenemos la [visualización del mapa personalizado](https://www.google.com/maps/d/viewer?mid=1iqx-9Rpueb-YXehyNAGRHJWyKXSJaIk&ll=41.68387617058557%2C-4.671331899999988&z=7) que hemos creado. Seleccionando el icono para agrandar el mapa que aparece en la esquina superior derecha, podrás acceder su visualización en pantalla completa.
 
 ### 6.3 Funcionalidades sobre el mapa (capas, pines, rutas y vista inmersiva 3D)
 En este punto, una vez creado el mapa personalizado, explicaremos diversas funcionalidades que nos ofrece "Google My Maps" durante la visualización de los datos.
 * Capas: Mediante el menú desplegable de la izquierda, podemos activar y desactivar las capas a mostrar según nuestras necesidades. 
+
+[Figura 10. Capas en "My Maps"](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/Generacion_mapa_personalizado/Imagenes/MyMaps5.PNG)
+
 * Pines: Pinchando en cada uno de los pines del mapa podemos acceder a la información asociada a esa posición geográfica.
+
+[Figura 11. Pines en "My Maps"](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/Generacion_mapa_personalizado/Imagenes/MyMaps6.PNG)
+
 * Rutas: Podemos crear una copia del mapa sobre la que añadir nuestros recorridos personalizados.  
 En las opciones del menú lateral izquierdo, seleccionamos “copiar mapa”. Una vez copiado el mapa, mediante el símbolo de añadir indicaciones, situado debajo de la barra buscador, generaremos una nueva capa. A esta capa podremos indicarle dos o más puntos, junto al medio de transporte y nos creará el trazado junto a las indicaciones de trayecto. 
+
+[Figura 12. Rutas en "My Maps"](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/Generacion_mapa_personalizado/Imagenes/MyMaps7.PNG)
+
 * Mapa inmersivo en 3D: Mediante el símbolo de opciones que aparece en el menú lateral, podemos acceder a Google Earth, desde donde podemos realizar una exploración del mapa inmersiva en 3D, destacando el poder observar la altitud de los distintos puntos de interés. También puedes acceder mediante el siguiente enlace.
 
+[Figura 13. Rutas en "My Maps"](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/Generacion_mapa_personalizado/Imagenes/MyMaps8.PNG)
 
 ## 7. Conclusiones del ejercicio
 La visualización de datos es uno de los mecanismos más potentes para explotar y analizar el significado implícito de los datos. Cabe destacar la vital importancia que los datos geográficos tienen en el sector del turismo, lo cual hemos podido comprobar en este ejercicio. 
