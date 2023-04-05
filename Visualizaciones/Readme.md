@@ -11,3 +11,4 @@ Este repositorio contiene **ejercicios prácticos de visualización de datos abi
  5. [Caracterización del alumnado de la Universidad española y titulaciones más demandadas](https://github.com/Admindatosgobes/Laboratorio-de-Datos/tree/main/Visualizaciones/Caracterizaci%C3%B3n%20del%20alumnado%20de%20la%20Universidad%20espa%C3%B1ola%20y%20titulaciones%20m%C3%A1s%20demandadas)
  6. [Análisis del estado y evolución de los embalses de agua nacionales](https://github.com/datosgobes/Laboratorio-de-Datos/tree/main/Visualizaciones/Estudio%20estado%20de%20los%20embalses%20nacionales)
  7. [Análisis de los resultados toxicológicos en los accidentes de tráfico](https://github.com/datosgobes/Laboratorio-de-Datos/tree/main/Visualizaciones/Analisis-toxicologicos)
+ 8. [Generación de mapa turístico personalizado con "Google My Maps"](https://datos.gob.es/es/documentacion/generacion-de-mapa-turistico-personalizado-con-google-my-maps)
