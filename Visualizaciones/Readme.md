@@ -12,3 +12,4 @@ Este repositorio contiene **ejercicios prácticos de visualización de datos abi
  6. [Análisis del estado y evolución de los embalses de agua nacionales](https://github.com/datosgobes/Laboratorio-de-Datos/tree/main/Visualizaciones/Estudio%20estado%20de%20los%20embalses%20nacionales)
  7. [Análisis de los resultados toxicológicos en los accidentes de tráfico](https://github.com/datosgobes/Laboratorio-de-Datos/tree/main/Visualizaciones/Analisis-toxicologicos)
  8. [Generación de mapa turístico personalizado con "Google My Maps"](https://datos.gob.es/es/documentacion/generacion-de-mapa-turistico-personalizado-con-google-my-maps)
+ 9. [Análisis de datos meteorológicos utilizando la librería "ggplot2"](https://datos.gob.es/es/documentacion/analisis-de-datos-meteorologicos-utilizando-la-libreria-ggplot2)
