@@ -1,6 +1,6 @@
 # Estudio sobre la alimentación en los hogares españoles
 
-## Introducción
+## 1. Introducción
 Las visualizaciones son representaciones gráficas de datos que permiten comunicar de manera sencilla y efectiva la información ligada a los mismos. Las posibilidades de visualización son muy amplias, desde representaciones básicas, como los gráficos de líneas, de barras o de sectores, hasta visualizaciones configuradas sobre cuadros de mando interactivos.  
 
 En esta sección de [“Visualizaciones paso a paso”](https://datos.gob.es/es/documentacion/tipo/visualizaciones-paso-paso-3923) estamos presentando periódicamente ejercicios prácticos de visualizaciones de datos abiertos disponibles en  datos.gob.es u otros catálogos similares. En ellos se abordan y describen de manera sencilla las etapas necesarias para obtener los datos, realizar las transformaciones y los análisis que resulten pertinentes para, finalmente, posibilitar la creación de visualizaciones interactivas que nos permitan obtener unas conclusiones finales a modo de resumen de dicha información. En cada uno de estos ejercicios prácticos, se utilizan sencillos desarrollos de código convenientemente documentados, así como herramientas de uso gratuito. Todo el material generado está disponible para su reutilización en el repositorio Laboratorio de datos de GitHub. 
@@ -9,10 +9,10 @@ A continuación, y como complemento a la explicación que encuentras a continuac
 
 [Accede al repositorio del laboratorio de datos en Github](https://github.com/datosgobes/Laboratorio-de-Datos/tree/main/Visualizaciones/Estudio_alimentacion_hogares_espa%C3%B1oles).
 
-[Ejecuta el código de pre-procesamiento de datos sobre Google Colab]([https://colab.research.google.com/drive/1OzhzDP7NnIjBOJfEqROhfphsRxIFD_Ed](https://colab.research.google.com/drive/1TH5mCsTlnTHeOgQaFLqZtpaJyootYWDc?usp=sharing)).
+[Ejecuta el código de pre-procesamiento de datos sobre Google Colab]([https://colab.research.google.com/drive/1OzhzDP7NnIjBOJfEqROhfphsRxIFD_Ed](https://colab.research.google.com/drive/1TH5mCsTlnTHeOgQaFLqZtpaJyootYWDc?usp=sharing).
 
 
-## Objetivo
+## 2. Objetivo
 El objetivo principal de este ejercicio es mostrar como generar un cuadro de mando interactivo que, partiendo de datos abiertos, nos muestre información relevante sobre el consumo en alimentación de los hogares españoles partiendo de datos abiertos. Para ello realizaremos un preprocesamiento de los datos abiertos con la finalidad de obtener las tablas que utilizaremos en la herramienta generadora de las visualizaciones para crear el cuadro de mando interactivo.  
 
 Los cuadros de mando son herramientas que permiten presentar información de manera visual y fácilmente comprensible. También conocidos por el témino en inglés "dashboards", son utilizados para monitorizar, analizar y comunicar datos e indicadores. Su contenido suele incluir gráficos, tablas, indicadores, mapas y otros elementos visuales que representan datos y métricas relevantes. Estas visualizaciones ayudan a los usuarios a comprender rápidamente una situación, identificar tendencias, detectar patrones y tomar decisiones informadas.   
@@ -30,34 +30,28 @@ Una vez analizados los datos, mediante esta visualización podremos contestar a 
 Éstas, y otras muchas preguntas pueden ser resueltas mediante el cuadro de mando que mostrará información de forma ordenada y sencilla de interpretar. 
 
 
-## Recursos
-### Conjuntos de datos
-Para este caso práctico se han seleccionado conjuntos de datos publicados por el [Ministerio para la Transición Ecológica y el Reto Demográfico](https://www.miteco.gob.es/es/), que dentro del boletín hidrológico recoge series temporales de datos sobre él volumen de agua embalsada de los últimos años para todos los embalses nacionales con una capacidad superior a 5hm3.
-Datos históricos del volumen de agua embalsada disponibles en: https://www.miteco.gob.es/es/agua/temas/evaluacion-de-los-recursos-hidricos/boletin-hidrologico/default.aspx 
+## 3. Recursos
+### 3.1 Conjuntos de datos
+Los conjuntos de datos abiertos utilizados en este ejercicio contienen distinta información sobre el consumo per cápita y el gasto per cápita de los principales grupos de alimentos desglosados por Comunidad Autónoma. Los conjuntos de datos abiertos utilizados, pertenecientes al [Ministerio de Agricultura, Pesca y Alimentación (MAPA)](https://www.mapa.gob.es/es/), se proporcionan en series anuales (utilizaremos las series anuales desde el 2010 hasta el 2021) 
 
-También se ha seleccionado un conjunto de datos geoespaciales. Durante su búsqueda, se han encontrado dos posibles archivos con datos de entrada, el que contiene las áreas geográficas correspondientes a los embalses de España y el que contiene las presas que incluye su geoposicionamiento como un punto geográfico. Aunque evidentemente no son lo mismo, embalses y presas guardan relación y para simplificar este ejercicio práctico optamos por utilizar el archivo que contiene la relación de presas de España.
-Inventario de presas disponible en: https://www.mapama.gob.es/ide/metadatos/index.html?srv=metadata.show&uuid=4f218701-1004-4b15-93b1-298551ae9446, concretamente: https://www.miteco.gob.es/es/cartografia-y-sig/ide/descargas/egis_presa_geoetrs89_tcm30-175857.zip
+*[Series anuales datos de consumo alimentario en hogares](https://www.mapa.gob.es/es/alimentacion/temas/consumo-tendencias/panel-de-consumo-alimentario/series-anuales/)
 
-Este conjunto de datos contiene geolocalizadas (Latitud, Longitud) las presas de toda España con independencia de su titularidad. Se entiende por presa, aquellas estructuras artificiales que, limitando en todo o en parte el contorno de un recinto enclavado en el terreno, esté destinada al almacenamiento de agua dentro del mismo. 
-
-Para generar los puntos geográficos de interés se realiza un procesamiento mediante la herramienta [QGIS](https://www.qgis.org/es/site/), cuyos pasos son los siguientes: descargar el archivo ZIP, cargarlo en QGIS y guardarlo como CSV incluyendo la geometría de cada elemento como dos campos que especifican su posición como un punto geográfico (Latitud y Longitud). 
-
-También se he realizado un filtrado para quedarnos con los datos correspondientes a las presas de los embalses que tengan una capacidad mayor a 5hm3
+Estos conjuntos de datos también se encuentran disponibles para su descarga en el siguiente [repositorio de Github](https://github.com/datosgobes/Laboratorio-de-Datos/tree/main/Visualizaciones/Estudio_alimentacion_hogares_espa%C3%B1oles). 
 
 
-### Herramientas
+### 3.2 Herramientas
 Para la realización del preprocesamiento de los datos se ha utilizado el lenguaje de programación Python desde el servicio cloud de [Google Colab](https://colab.research.google.com/), que permite la ejecución de [Notebooks de Jupyter](https://jupyter.org/).
 
 > Google Colab o también llamado Google Colaboratory, es un servicio gratuito en la nube de Google Research que permite programar, ejecutar y compartir código escrito en Python o R desde tu navegador, por lo que no requiere la instalación de ninguna herramienta o configuración.
 
-Para la creación de la visualización interactiva se ha usado la herramienta [Google Data Studio](https://datastudio.google.com/).
+Para la creación de la visualización interactiva se ha usado la herramienta [Looker Studio](https://lookerstudio.google.com/navigation/reporting).
 
-> Google Data Studio es una herramienta online que permite realizar gráficos, mapas o tablas que pueden incrustarse en sitios web o exportarse como archivos. Esta herramienta es sencilla de usar y permite múltiples opciones de personalización.
+> Looker Studio antiguamente conocido como Google Data Studio, es una herramienta online que permite realizar cuadros de mandos interactivos que pueden insertarse en sitios web o exportarse como archivos. Esta herramienta es sencilla de usar y permite múltiples opciones de personalización. 
 
 Si quieres conocer más sobre herramientas que puedan ayudarte en el tratamiento y la visualización de datos, puedes recurrir al informe ["Herramientas de procesado y visualización de datos"](https://datos.gob.es/es/documentacion/herramientas-de-procesado-y-visualizacion-de-datos).
 
 
-## Enriquecimiento de los datos
+## 4. Tratamiento o preparación de los datos
 Con la finalidad de aportar mayor información relacionada a cada una de las presas en el dataset con datos geoespaciales, se realiza un proceso de enriquecimiento de datos explicado a continuación. 
 
 Para ello vamos a utilizar una herramienta útil para este tipo de tarea, [OpenRefine](https://openrefine.org/). Esta herramienta de código abierto permite realizar múltiples acciones de preprocesamiento de datos, aunque en esta ocasión la usaremos para llevar a cabo un enriquecimiento de nuestros datos mediante la incorporación de contexto enlazando automáticamente información que reside en el popular repositorio de conocimiento [Wikidata](https://www.wikidata.org/wiki/Wikidata:Main_Page). 
