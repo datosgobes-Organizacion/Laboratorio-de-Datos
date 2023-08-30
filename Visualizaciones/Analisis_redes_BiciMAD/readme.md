@@ -66,7 +66,9 @@ La red está formada por 253 nodos (estaciones) y 3012 aristas (interacciones en
 
 ### 5.2 Carga de la tabla preprocesada en Gephi
 Mediante la opción “importar hoja de cálculo” de la pestaña archivo, importamos en formato CSV la tabla de datos previamente preprocesada. Gephi detectará que tipo de datos se están cargando, por lo que utilizaremos los parámetros predefinidos por defecto.
+
 [Imagen 1a](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/Analisis_redes_BiciMAD/Imagenes/FIgura%201a.png)
+
 [Imagen 1b](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/Analisis_redes_BiciMAD/Imagenes/Figura%201b.png)
 
 ### 5.3 Opciones de visualización de la red
@@ -75,32 +77,39 @@ Mediante la opción “importar hoja de cálculo” de la pestaña archivo, impo
 En primer lugar, aplicamos en la ventana de distribución, el algoritmo Force Atlas 2. Este algoritmo utiliza la técnica de repulsión de nodos en función del grado de conexión de tal forma que los nodos escasamente conectados se separan respecto a los que tiene una mayor fuerza de atracción entre sí.
 
 Para evitar que las componentes conexas queden fuera de la vista principal, fijamos el valor del parámetro "Gravedad en Puesta a punto" a un valor de 10 y para evitar que los nodos queden amontonados, marcamos la opción “Disuadir Hubs” y “Evitar el solapamiento”.
-[Imagen2](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/Analisis_redes_BiciMAD/Imagenes/Figura%202.png)
+
+[Imagen 2](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/Analisis_redes_BiciMAD/Imagenes/Figura%202.png)
 
 Dentro de la ventana de distribución, también aplicamos el algoritmo de Expansión con la finalidad de que los nodos no se encuentren tan juntos entre sí mismos.
-[Imagen3](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/Analisis_redes_BiciMAD/Imagenes/Figura%203.png)
+
+[Imagen 3](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/Analisis_redes_BiciMAD/Imagenes/Figura%203.png)
 
 #### 5.3.2 Ventana de aparencia
 A continuación, en la ventana de apariencia, modificamos los nodos y sus etiquetas para que su tamaño no sea igualitario, sino que dependa del valor del grado de cada nodo (nodos con un mayor grado, mayor tamaño visual). También modificaremos el color de los nodos para que los de mayor tamaño sean de un color más llamativo que los de menor tamaño. En la misma ventana de apariencia modificamos las aristas, en este caso hemos optado por un color unitario para todas ellas, ya que por defecto el tamaño va acorde al peso de cada una de ellas.
 
 Un mayor grado en uno de los nodos implica un mayor número de estaciones conectadas con dicho nodo, mientras que un mayor peso de las aristas implica un mayor número de viajes para cada conexión.
-[Imagen4](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/Analisis_redes_BiciMAD/Imagenes/Figura%204.png)
+
+[Imagen 4](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/Analisis_redes_BiciMAD/Imagenes/Figura%204.png)
 
 #### 5.3.3 Ventana de grafo
 Por último, en la zona inferior de la interfaz de la ventana de grafo, tenemos diversas opciones como activar/desactivar el botón para mostrar las etiquetas de los distintos nodos, adecuar el tamaño de las aristas con la finalizad de hacer más limpia la visualización, modificar el tipo de letra de las etiquetas, …
-[Imagen5](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/Analisis_redes_BiciMAD/Imagenes/Figura%205.png)
+
+[Imagen 5](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/Analisis_redes_BiciMAD/Imagenes/Figura%205.png)
 
 A continuación, podemos ver la visualización del grafo que representa la red una vez aplicadas las opciones de visualización mencionadas en los puntos anteriores.
-[Imagen6](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/Analisis_redes_BiciMAD/Imagenes/Figura%206.png)
+
+[Imagen 6](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/Analisis_redes_BiciMAD/Imagenes/Figura%206.png)
 
 Activando la opción de visualizar etiquetas y colocando el cursor sobre uno de los nodos, se mostrarán los enlaces que corresponden al nodo y el resto de los nodos que están vinculados al elegido mediante dichos enlaces.
 
 A continuación, podemos visualizar los nodos y enlaces relativos a la estación de bicicletas “Fernando el Católico". En la visualización se distinguen con facilidad los nodos que poseen un mayor número de conexiones, ya que aparecen con un mayor tamaño y colores más llamativos, como por ejemplo "Plaza de la Cebada" o "Quevedo".
-[Imagen7](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/Analisis_redes_BiciMAD/Imagenes/Figura%207.png)
+
+[Imagen 7](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/Analisis_redes_BiciMAD/Imagenes/Figura%207.png)
 
 ### 5.4 Principales medidas de red
 Junto a la visualización del grafo, las siguientes medidas nos aportan la principal información de la red analizada. Estas medias, que son las métricas habituales cuando se realiza analítica de redes, podremos calcularlas en la ventana de estadísticas.
-[Imagen8](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/Analisis_redes_BiciMAD/Imagenes/Figura%208.png)
+
+[Imagen 8](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/Analisis_redes_BiciMAD/Imagenes/Figura%208.png)
 
 - Nodos (N): son los distintos elementos individuales que componen una red, representando entidades diversas. En este caso las distintas estaciones de bicicletas. Su valor en la red es de 243
 - Enlaces (L): son las conexiones que existen entre los nodos de una red. Los enlaces representan las relaciones o interacciones entre los elementos individuales (nodos) que componen la red. Su valor en la red es de 3014
@@ -118,16 +127,19 @@ La probabilidad de grados sigue de forma aproximada una distribución de larga c
 El grado medio es de 23,8 lo que indica que cada estación interacciona de media con cerca de otras 24 estaciones (entrada y salida).
 
 En el siguiente gráfico podemos observar que, aunque tengamos nodos con grados considerados como altos (80, 90, 100, …), se observa que el 25% de los nodos tienen grados iguales o inferiores a 8, mientras que el 75% de los nodos tienen grados inferiores o iguales a 32.
-[Figura9](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/Analisis_redes_BiciMAD/Imagenes/Figura%209.png)
+[Imagen 9](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/Analisis_redes_BiciMAD/Imagenes/Figura%209.png)
 
 La gráfica anterior se puede desglosar en las dos siguientes correspondientes al grado medio de entrada y de salida (ya que la red es direccional). Vemos que ambas tienen distribuciones de larga cola similares, siendo su grado medio el mismo de 11,9.
 
 Su principal diferencia es que la gráfica correspondiente al grado medio de entrada tiene una mediana de 7 mientras que la de salida es de 9, lo que significa que existe una mayoría de nodos con grados más bajos en los de entrada que los de salida.
-[Figura 10a](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/Analisis_redes_BiciMAD/Imagenes/Figura%2010a.png)
-[Figura 10b](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/Analisis_redes_BiciMAD/Imagenes/Figura%2010b.png)
+
+[Imagen 10a](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/Analisis_redes_BiciMAD/Imagenes/Figura%2010a.png)
+
+[Imagen 10b](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/Analisis_redes_BiciMAD/Imagenes/Figura%2010b.png)
 
 El valor del grado medio con pesos es de 346,07 lo cual nos indica la media de viajes totales de entrada y salida de cada estación.
-[Figura 11](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/Analisis_redes_BiciMAD/Imagenes/Figura%2011.png)
+
+[Imagen 11](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/Analisis_redes_BiciMAD/Imagenes/Figura%2011.png)
 
 La densidad de red de 0,047 es considerada una densidad baja indicando que la red es dispersa, es decir, contiene pocas interacciones entre distintas estaciones en relación con las posibles. Esto se considera lógico debido a que las conexiones entre estaciones estarán limitadas a ciertas zonas debido a la dificultad de llegar a estaciones que se encuentra a largas distancias.
 
