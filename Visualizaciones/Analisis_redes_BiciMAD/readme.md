@@ -66,6 +66,91 @@ La red está formada por 253 nodos (estaciones) y 3012 aristas (interacciones en
 
 ### 5.2 Carga de la tabla preprocesada en Gephi
 Mediante la opción “importar hoja de cálculo” de la pestaña archivo, importamos en formato CSV la tabla de datos previamente preprocesada. Gephi detectará que tipo de datos se están cargando, por lo que utilizaremos los parámetros predefinidos por defecto.
+[Imagen 1a](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/Analisis_redes_BiciMAD/Imagenes/FIgura%201a.png)
+[Imagen 1b](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/Analisis_redes_BiciMAD/Imagenes/Figura%201b.png)
+
+### 5.3 Opciones de visualización de la red
+
+#### 5.3.1 Ventana de distribución
+En primer lugar, aplicamos en la ventana de distribución, el algoritmo Force Atlas 2. Este algoritmo utiliza la técnica de repulsión de nodos en función del grado de conexión de tal forma que los nodos escasamente conectados se separan respecto a los que tiene una mayor fuerza de atracción entre sí.
+
+Para evitar que las componentes conexas queden fuera de la vista principal, fijamos el valor del parámetro "Gravedad en Puesta a punto" a un valor de 10 y para evitar que los nodos queden amontonados, marcamos la opción “Disuadir Hubs” y “Evitar el solapamiento”.
+[Imagen2](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/Analisis_redes_BiciMAD/Imagenes/Figura%202.png)
+
+Dentro de la ventana de distribución, también aplicamos el algoritmo de Expansión con la finalidad de que los nodos no se encuentren tan juntos entre sí mismos.
+[Imagen3](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/Analisis_redes_BiciMAD/Imagenes/Figura%203.png)
+
+#### 5.3.2 Ventana de aparencia
+A continuación, en la ventana de apariencia, modificamos los nodos y sus etiquetas para que su tamaño no sea igualitario, sino que dependa del valor del grado de cada nodo (nodos con un mayor grado, mayor tamaño visual). También modificaremos el color de los nodos para que los de mayor tamaño sean de un color más llamativo que los de menor tamaño. En la misma ventana de apariencia modificamos las aristas, en este caso hemos optado por un color unitario para todas ellas, ya que por defecto el tamaño va acorde al peso de cada una de ellas.
+
+Un mayor grado en uno de los nodos implica un mayor número de estaciones conectadas con dicho nodo, mientras que un mayor peso de las aristas implica un mayor número de viajes para cada conexión.
+[Imagen4](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/Analisis_redes_BiciMAD/Imagenes/Figura%204.png)
+
+#### 5.3.3 Ventana de grafo
+Por último, en la zona inferior de la interfaz de la ventana de grafo, tenemos diversas opciones como activar/desactivar el botón para mostrar las etiquetas de los distintos nodos, adecuar el tamaño de las aristas con la finalizad de hacer más limpia la visualización, modificar el tipo de letra de las etiquetas, …
+[Imagen5](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/Analisis_redes_BiciMAD/Imagenes/Figura%205.png)
+
+A continuación, podemos ver la visualización del grafo que representa la red una vez aplicadas las opciones de visualización mencionadas en los puntos anteriores.
+[Imagen6](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/Analisis_redes_BiciMAD/Imagenes/Figura%206.png)
+
+Activando la opción de visualizar etiquetas y colocando el cursor sobre uno de los nodos, se mostrarán los enlaces que corresponden al nodo y el resto de los nodos que están vinculados al elegido mediante dichos enlaces.
+
+A continuación, podemos visualizar los nodos y enlaces relativos a la estación de bicicletas “Fernando el Católico". En la visualización se distinguen con facilidad los nodos que poseen un mayor número de conexiones, ya que aparecen con un mayor tamaño y colores más llamativos, como por ejemplo "Plaza de la Cebada" o "Quevedo".
+[Imagen7](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/Analisis_redes_BiciMAD/Imagenes/Figura%207.png)
+
+### 5.4 Principales medidas de red
+Junto a la visualización del grafo, las siguientes medidas nos aportan la principal información de la red analizada. Estas medias, que son las métricas habituales cuando se realiza analítica de redes, podremos calcularlas en la ventana de estadísticas.
+[Imagen8](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/Analisis_redes_BiciMAD/Imagenes/Figura%208.png)
+
+- Nodos (N): son los distintos elementos individuales que componen una red, representando entidades diversas. En este caso las distintas estaciones de bicicletas. Su valor en la red es de 243
+- Enlaces (L): son las conexiones que existen entre los nodos de una red. Los enlaces representan las relaciones o interacciones entre los elementos individuales (nodos) que componen la red. Su valor en la red es de 3014
+Número máximo de enlaces (Lmax): es el máximo posible de enlaces en la red. Se calcula mediante la siguiente fórmula Lmax= N(N-1)/2. Su valor en la red es de 31878
+- Grado medio (k): es una medida estadística para cuantificar la conectividad promedio de los nodos de la red. Se calcula promediando los grados de todos los nodos de la red. Su valor en la red es de 23,8
+- Densidad de la red (d): indica la proporción de conexiones existentes entre los nodos de la red con respecto al total de conexiones posibles. Su valor en la red es de 0,047
+- Diámetro (dmax ): es la distancia de grafo más larga entre dos nodos cualquiera de la res, es decir, cómo de lejos están los 2 nodos más alejados. Su valor en la red es de 7
+- Distancia media (d): es la distancia de grafo media promedio entre los nodos de la red. Su valor en la red es de 2,68
+- Coeficiente medio de clustering (C): Índica cómo los nodos están incrustados entre sus nodos vecinos. El valor medio da una indicación general de la agrupación en la red. Su valor en la red es de 0,208
+- Componente conexa: grupo de nodos que están directa o indirectamente conectados entre sí, pero no están conectados con los nodos fuera de ese grupo. Su valor en la red es de 24
+
+### 5.5 Interpretación de los resultados
+La probabilidad de grados sigue de forma aproximada una distribución de larga cola, donde podemos observar que existen unas pocas estaciones que interactúan con un gran número de ellas mientras que la mayoría interactúa con un número bajo de estaciones.
+
+El grado medio es de 23,8 lo que indica que cada estación interacciona de media con cerca de otras 24 estaciones (entrada y salida).
+
+En el siguiente gráfico podemos observar que, aunque tengamos nodos con grados considerados como altos (80, 90, 100, …), se observa que el 25% de los nodos tienen grados iguales o inferiores a 8, mientras que el 75% de los nodos tienen grados inferiores o iguales a 32.
+[Figura9](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/Analisis_redes_BiciMAD/Imagenes/Figura%209.png)
+
+La gráfica anterior se puede desglosar en las dos siguientes correspondientes al grado medio de entrada y de salida (ya que la red es direccional). Vemos que ambas tienen distribuciones de larga cola similares, siendo su grado medio el mismo de 11,9.
+
+Su principal diferencia es que la gráfica correspondiente al grado medio de entrada tiene una mediana de 7 mientras que la de salida es de 9, lo que significa que existe una mayoría de nodos con grados más bajos en los de entrada que los de salida.
+[Figura 10a](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/Analisis_redes_BiciMAD/Imagenes/Figura%2010a.png)
+[Figura 10b](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/Analisis_redes_BiciMAD/Imagenes/Figura%2010b.png)
+
+El valor del grado medio con pesos es de 346,07 lo cual nos indica la media de viajes totales de entrada y salida de cada estación.
+[Figura 11](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/Analisis_redes_BiciMAD/Imagenes/Figura%2011.png)
+
+La densidad de red de 0,047 es considerada una densidad baja indicando que la red es dispersa, es decir, contiene pocas interacciones entre distintas estaciones en relación con las posibles. Esto se considera lógico debido a que las conexiones entre estaciones estarán limitadas a ciertas zonas debido a la dificultad de llegar a estaciones que se encuentra a largas distancias.
+
+El coeficiente medio de clustering es de 0,208 significando que la interacción de dos estaciones con una tercera no implica necesariamente la interacción entre sí, es decir, no implica necesariamente transitividad, por lo que la probabilidad de interconexión de esas dos estaciones mediante la intervención de una tercera es baja.
+
+Por último, la red presenta 24 componentes conexas, siendo 2 de ellas componentes conexas débiles y 22 componentes conexas fuertes.
+
+### 6.Conclusiones del ejercicio
+Una vez realizado el ejercicio, podemos apreciar las siguientes conclusiones:
+
+- Las tres estaciones más interconectadas con otras estaciones son Plaza de la Cebada (133), Plaza de Lavapiés (126) y Fernando el Católico (114).
+- La estación que tiene un mayor número de conexiones de entrada es la Plaza de la Cebada (78), mientras que la que tiene un mayor número de conexiones de salida es la Plaza de Lavapiés con el mismo número que Fernando el Católico (57)
+- Las tres estaciones con un mayor número de viajes totales son Plaza de la Cebada (4524), Plaza de Lavapiés (4237) y Fernando el Católico (3526).
+- Existen 20 rutas con más de 100 viajes. Siendo las 3 rutas con un mayor número de ellos: Puerta de Toledo – Plaza Conde Suchil (141), Quintana Fuente del Berro – Quintana (137), Camino Vinateros – Miguel Moya (134).
+- Teniendo en cuenta el número de conexiones entre estaciones y de viajes, las estaciones de mayor importancia dentro de la red son: Plaza la Cebada, Plaza de Lavapiés y Fernando el Católico.
+- 
+Esperemos que esta visualización paso a paso te haya resultado útil para el aprendizaje de algunas técnicas muy habituales en el tratamiento y representación de datos abiertos. Volveremos para mostraros nuevas reutilizaciones. ¡Hasta pronto!
+
+
+
+
+
+
 
 
 
