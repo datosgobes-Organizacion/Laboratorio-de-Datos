@@ -67,7 +67,6 @@ La red está formada por 253 nodos (estaciones) y 3012 aristas (interacciones en
 ### 5.2 Carga de la tabla preprocesada en Gephi
 Mediante la opción “importar hoja de cálculo” de la pestaña archivo, importamos en formato CSV la tabla de datos previamente preprocesada. Gephi detectará que tipo de datos se están cargando, por lo que utilizaremos los parámetros predefinidos por defecto.
 
-![Imagen 1](https://github.com/datosgobes/Laboratorio-de-Datos/assets/13691480/0e998eea-3090-4354-9865-37c037da59bd)
 
 
 
