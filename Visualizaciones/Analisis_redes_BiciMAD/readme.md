@@ -52,7 +52,7 @@ Los pasos que se siguen en este preprocesamiento de los datos, explicados en est
 1. Instalación de librerías y carga de los conjuntos de datos
 2. Análisis exploratorio de los datos (EDA)
 3. Generación de tablas preprocesadas
-4. 
+
 Podrás reproducir este análisis con el código fuente que está disponible en nuestra cuenta de GitHub. La forma de proporcionar el código es a través de un documento realizado sobre un Jupyter Notebook que, una vez cargado en el entorno de desarrollo, podrás ejecutar o modificar de manera sencilla.
 
 Debido al carácter divulgativo de este post y para favorecer el entendimiento de los lectores no especializados, el código no pretende ser el más eficiente sino facilitar su comprensión, por lo que posiblemente se te ocurrirán muchas formas de optimizar el código propuesto para lograr fines similares. ¡Te animamos a que lo hagas!
