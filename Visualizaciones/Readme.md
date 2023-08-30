@@ -14,3 +14,4 @@ Este repositorio contiene **ejercicios prácticos de visualización de datos abi
  8. [Generación de mapa turístico personalizado con "Google My Maps"](https://datos.gob.es/es/documentacion/generacion-de-mapa-turistico-personalizado-con-google-my-maps)
  9. [Análisis de datos meteorológicos utilizando la librería "ggplot2"](https://datos.gob.es/es/documentacion/analisis-de-datos-meteorologicos-utilizando-la-libreria-ggplot2)
  10. [Estudio sobre la alimentación en los hogares españoles](https://datos.gob.es/es/documentacion/estudio-sobre-la-alimentacion-en-los-hogares-espanoles)
+ 11. Análisis de redes sobre los viajes en bicicletas de BICIMAD
