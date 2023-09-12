@@ -147,7 +147,45 @@ El coeficiente medio de clustering es de 0,208 significando que la interacción 
 
 Por último, la red presenta 24 componentes conexas, siendo 2 de ellas componentes conexas débiles y 22 componentes conexas fuertes.
 
-### 6.Conclusiones del ejercicio
+### 5.6 Análisis de centralidad
+Un análisis de centralidad se refiere a la evaluación de la importancia de los nodos en una red utilizando diferentes medidas. La centralidad es un concepto fundamental en el análisis de redes y se utiliza para identificar nodos clave o influyentes dentro de una red. Para realizar esta tarea se parte de las métricas calculadas en la ventana de estadísticas.
+
+La medida de centralidad de grado indica que cuanto más alto es el grado de un nodo, más importante es. Las cinco estaciones con valores más elevados son: 1º Plaza de la Cebada, 2º Plaza de Lavapiés, 3º Fernando el Católico, 4º Quevedo, 5º Segovia 45.
+
+[Imagen 12](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/Analisis_redes_BiciMAD/Imagenes/Figura%2012.png)
+
+La media de centralidad de cercanía indica que cuanto más alto sea el valor de cercanía de un nodo, más central es, ya que puede alcanzar cualquier otro nodo de la red con el menor esfuerzo posible. Las cinco estaciones que valores más elevados poseen son: 1º Fernando el Católico 2º General Pardiñas, 3º Plaza de la Cebada, 4º Plaza de Lavapiés, 5º Puerta de Madrid.
+
+[Imagen 13](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/Analisis_redes_BiciMAD/Imagenes/Figura%2013.png)
+
+[Imagen 14](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/Analisis_redes_BiciMAD/Imagenes/Figura%2014.png)
+
+La medida de centralidad de intermediación indica que cuanto mayor sea la medida de intermediación de un nodo, más importante es dado que está presente en más rutas de interacción entre nodos que el resto de los nodos de la red. Las cinco estaciones que valores más elevados poseen son: 1º Fernando el Católico, 2º Plaza de Lavapiés, 3º Plaza de la Cebada, 4º Puerta de Madrid, 5º Quevedo.
+
+[Imagen 15](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/Analisis_redes_BiciMAD/Imagenes/Figura%2015.png)
+
+[Imagen 16](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/Analisis_redes_BiciMAD/Imagenes/Figura%2016.png)
+
+Con la herramienta Gephi se pueden calcular gran cantidad de métricas y parámetros que no se reflejan en este estudio ,como por ejemplo, la medida de vector propio o distribucción de centralidad "eigenvector". 
+
+### 5.7 Filtros
+
+Mediante la ventana de filtrado, podemos seleccionar ciertos parámetros que simplifiquen las visualizaciones con la finalidad de mostrar información relevante del análisis de redes de una forma más clara visualmente.
+
+[Imagen 17](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/Analisis_redes_BiciMAD/Imagenes/Figura%2010b.png)
+
+A continuación, mostraremos varios filtrados realizados:
+Filtrado de rango (grado), en el que se muestran los nodos con un rango superior a 50, suponiendo un 13,44% (34 nodos) y un 15,41% (464 aristas)
+
+[Imagen 18](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/Analisis_redes_BiciMAD/Imagenes/Figura%2018.png)
+
+Filtrado de aristas (peso de la arista), en el que se muestran las aristas con un peso superior a 100, suponiendo un 0,7% (20 aristas)
+
+[Imagen 19](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/Analisis_redes_BiciMAD/Imagenes/Figura%2019.png)
+
+Dentro de la ventana de filtros, existen muchas otras opciones de filtrado sobre atributos, rangos, tamaños de particiones, las aristas, … con los que puedes probar a realizar nuevas visualizaciones para extraer información del grafo. Si quieres conocer más sobre el uso de Gephi, puedes consultar los siguientes cursos y formaciones sobre la herramienta.
+
+## 6.Conclusiones del ejercicio
 Una vez realizado el ejercicio, podemos apreciar las siguientes conclusiones:
 
 - Las tres estaciones más interconectadas con otras estaciones son Plaza de la Cebada (133), Plaza de Lavapiés (126) y Fernando el Católico (114).
