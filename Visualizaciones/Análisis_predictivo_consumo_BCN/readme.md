@@ -128,7 +128,37 @@ Por último, mediante una gráfica de barras observaremos de forma visual la imp
 [Imagen4](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/An%C3%A1lisis_predictivo_consumo_BCN/Imagenes/Imagen4.png)
 
 ### 4.4 Entrenamiento del modelo
+Este apartado podrás encontrarlo en el punto 4 del Notebook.
 
+Una vez entrenado el modelo, evaluaremos cómo de preciso es para los valores conocidos del set de validación.
 
+Podemos evaluar de forma visual el modelo ploteando la serie temporal con los valores conocidos junto a las predicciones realizadas para el set de validación como se muestra en la siguiente figura.
 
+[Imagen5](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/An%C3%A1lisis_predictivo_consumo_BCN/Imagenes/Imagen5.png)
 
+También podemos evaluar de forma numérica la precisión del modelo mediante distintas métricas. En este ejercicio hemos optado por utilizar la métrica del error porcentual absoluto medio (MAPE), el cuál ha sido de un 6,58%. La precisión del modelo se considera alta o baja dependiendo del contexto y de las expectativas en dicho modelo, generalmente un MAPE se considera bajo cuando es inferior al 5%, mientras que se considera alto cuando es superior al 10%. En este ejercicio, el resultado de la validación del modelo puede ser considerado un valor aceptable.
+
+Si quieres consultar otro tipo de métricas para evaluar la precisión de modelos aplicados a series temporales, puedes consultar el [siguiente enlace](https://polmartisanahuja.com/metricas-de-evaluacion-de-rendimiento-para-predicciones-de-series-temporales/).
+
+### 4.5 Predicciones valores futuros
+Este apartado podrás encontrarlo en el punto 5 del Notebook.
+
+Una vez generado el modelo y evaluado su rendimiento MAPE = 6,58 %, pasamos a aplicar dicho modelo al total de datos conocidos, con la finalidad de predecir los valores de consumo eléctrico no conocidos del 2023.
+
+En primer lugar, volvemos a entrenar el modelo con los valores conocidos hasta finales del 2022, sin dividir en set de entrenamiento y validación. Por último, calculamos los valores futuros para el año 2023.
+
+[Imagen6](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/An%C3%A1lisis_predictivo_consumo_BCN/Imagenes/Imagen6.png)
+
+En la siguiente [visualización interactiva](https://lookerstudio.google.com/reporting/9c47e41a-87d0-4c10-b37c-3b732a983125) puedes observar los valores predichos para el año 2023 junto a sus principales métricas, pudiendo filtrar por periodo temporal.
+Mejorar los resultados de los modelos predictivos de series temporales es un objetivo importante en la ciencia de datos y el análisis de datos. Varias estrategias que pueden ayudar a mejorar la precisión del modelo del ejercicio son el uso de variables exógenas, la utilización de más datos históricos o generación de datos sintéticos, optimización de los parámetros, …
+
+Debido al carácter divulgativo de este ejercicio y para favorecer el entendimiento de los lectores menos especializados, nos hemos propuesto explicar de una forma lo más sencilla y didáctica posible el ejercicio. Posiblemente se te ocurrirán muchas formas de optimizar el modelo predictivo para lograr mejores resultados, ¡Te animamos a que lo hagas!
+
+## 5. Conclusiones ejercicio
+Una vez realizado el ejercicio, podemos apreciar distintas conclusiones como las siguientes:
+
+- Los valores máximos para las predicciones de consumo en el 2023 se dan en la última quincena de julio superando valores de 22.500.000 MWh
+- El mes con un mayor consumo según las predicciones del 2023 será julio, mientras que el mes con un menor consumo medio será noviembre, existiendo una diferencia porcentual entre ambos del 25,24%
+- La predicción de consumo medio diario para el 2023 es de 17.259.844 MWh, un 1,46% inferior a la registrada entre los años 2019 y 2022.
+  
+Esperemos que este ejercicio te haya resultado útil para el aprendizaje de algunas técnicas habituales en el estudio y análisis de datos abiertos. Volveremos para mostraros nuevas reutilizaciones. ¡Hasta pronto!
