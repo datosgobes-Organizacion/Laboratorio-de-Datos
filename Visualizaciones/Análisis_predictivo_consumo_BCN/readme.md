@@ -125,7 +125,7 @@ Estos parámetros se pueden ajustar para mejorar el rendimiento del modelo en un
 
 Por último, mediante una gráfica de barras observaremos de forma visual la importancia de cada uno de los atributos durante el entrenamiento del modelo. Se puede utilizar para identificar los atributos más importantes en un conjunto de datos, lo que puede ser útil para la interpretación del modelo y la selección de características.
 
-[Imagen4](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/An%C3%A1lisis_predictivo_consumo_BCN/Imagenes/Imagen4.png)
+
 
 
 
