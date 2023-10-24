@@ -74,5 +74,5 @@ A continuación, en la [siguiente visualización interactiva](https://lookerstud
 
 Una vez inspeccionada la visualización interactiva de la serie temporal, habrás observado diversos valores que potencialmente podrían ser considerados como outliers, como se muestra en la siguiente figura. También podemos calcular de forma numérica estos outliers, como se muestra en el notebook.
 
-[Imagen1]()
+
 
