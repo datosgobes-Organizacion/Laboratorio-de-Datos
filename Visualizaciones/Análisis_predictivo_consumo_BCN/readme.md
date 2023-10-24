@@ -28,6 +28,7 @@ Una vez realizado el análisis, podremos contestar a preguntas como las que se p
 Estas y otras muchas preguntas pueden ser resueltas mediante las visualizaciones obtenidas en el análisis que mostrarán la información de una forma ordenada y sencilla de interpretar.
 
 ## 3. Recursos
+
 ### 3.1 Conjuntos de datos
 Los conjuntos de datos abiertos utilizados contienen información sobre el consumo eléctrico en la ciudad de Barcelona en los últimos años. La información que aportan es el consumo en (MWh) desglosados por día, sector económico, código postal y tramo horario.
 
@@ -36,6 +37,7 @@ Estos conjuntos de datos abiertos son publicados por el Ayuntamiento de Barcelon
 [Series anuales de consumo eléctrico (MWh) en la ciudad de Barcelona](https://datos.gob.es/es/catalogo/l01080193-consumo-de-electricidad-mwh-por-codigo-postal-sector-economico-y-tramo-horario)
 
 Estos conjuntos de datos también se encuentran disponibles para su descarga en el siguiente repositorio de Github. 
+
 ### 3.2 Conjuntos de datos
 Para la realización del análisis se ha utilizado el lenguaje de programación Python escrito sobre un Notebook de Jupyter alojado en el servicio en la nube de Google Colab.
 
@@ -46,3 +48,31 @@ Para la creación de las visualizaciones interactivas se ha usado la herramienta
 "Looker Studio", antiguamente conocido como Google Data Studio, es una herramienta online que permite realizar visualizaciones interactivas que pueden insertarse en sitios web o exportarse como archivos.
 
 Si quieres conocer más sobre herramientas que puedan ayudarte en el tratamiento y la visualización de datos, puedes recurrir al informe ["Herramientas de procesado y visualización de datos"](https://datos.gob.es/es/documentacion/herramientas-de-procesado-y-visualizacion-de-datos).
+
+## 4. Análisis predictivo de series temporales
+El análisis predictivo de series temporales es una técnica que utiliza datos históricos para predecir valores futuros de una variable que cambia con el tiempo. Las series temporales son datos que se recopilan en intervalos regulares, como días, semanas, meses o años. No es el objetivo de este ejercicio explicar en detalle las características de las series temporales, ya que nos centramos en explicar brevemente el modelo de predicción. No obstante, si quieres saber más al respecto, puedes consultar el siguiente [manual](https://halweb.uc3m.es/esp/personal/personas/amalonso/esp/seriestemporales.pdf).
+
+Este tipo de análisis se basa en el supuesto de que los valores futuros de una variable estarán correlacionados con los valores históricos. Utilizando técnicas estadísticas y de aprendizaje automático, se pueden identificar patrones en los datos históricos y utilizarlos para predecir valores futuros.
+
+El análisis predictivo realizado en el ejercicio ha sido dividido en cinco fases; preparación de los datos, análisis exploratorio de los datos, entrenamiento del modelo, validación del modelo y predicción de valores futuros), las cuales se explicarán en los próximos apartados.
+
+Los procesos que te describimos a continuación los encontrarás desarrollados y comentados en el siguiente [Notebook ejecutable desde Google Colab](https://colab.research.google.com/drive/1swG7g8s9e8uioZ44vTsx68JyOGX2go6Z?usp=sharing) junto al código fuente que está disponible en nuestra cuenta de Github.  
+
+Es aconsejable ir ejecutando el Notebook con el código a la vez que se realiza la lectura del post, ya que ambos recursos didácticos son complementarios en las futuras explicaciones.
+
+### 4.1 Preparación de los datos
+Este apartado podrás encontrarlo en el punto 1 del Notebook.
+
+En este apartado se importan los conjuntos de datos abiertos descritos en los puntos anteriores que utilizaremos en el ejercicio, prestando especial atención a su obtención y a la validación de su contenido, asegurándonos que se encuentran en el formato adecuado y consistente para su procesamiento y que no contienen errores que puedan condicionar los pasos futuros.
+
+### 4.2 Análisis exploratorio de los datos (EDA)
+Este apartado podrás encontrarlo en el punto 2 del Notebook.
+
+En este apartado realizaremos un análisis exploratorio de los datos (EDA), con el fin de interpretar adecuadamente los datos de origen, detectar anomalías, datos ausentes, errores u outliers que pudieran afectar a la calidad de los procesos posteriores y resultados.
+
+A continuación, en la [siguiente visualización interactiva](https://lookerstudio.google.com/reporting/393e1d74-91a4-471c-8842-be850887bfb6), podrás inspeccionar la tabla de datos con los valores de consumo históricos generada en el punto anterior pudiendo filtrar por periodo temporal concreto. De esta forma podemos comprender, de una forma visual, la principal información de la serie de datos.
+
+Una vez inspeccionada la visualización interactiva de la serie temporal, habrás observado diversos valores que potencialmente podrían ser considerados como outliers, como se muestra en la siguiente figura. También podemos calcular de forma numérica estos outliers, como se muestra en el notebook.
+
+[Imagen1]()
+
