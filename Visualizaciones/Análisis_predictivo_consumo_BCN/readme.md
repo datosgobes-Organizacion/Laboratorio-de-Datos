@@ -74,5 +74,58 @@ A continuación, en la [siguiente visualización interactiva](https://lookerstud
 
 Una vez inspeccionada la visualización interactiva de la serie temporal, habrás observado diversos valores que potencialmente podrían ser considerados como outliers, como se muestra en la siguiente figura. También podemos calcular de forma numérica estos outliers, como se muestra en el notebook.
 
+[Imagen0](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/An%C3%A1lisis_predictivo_consumo_BCN/Imagenes/Imagen0.png)
+
+Una vez evaluados los outliers, para este ejercicio se ha decidido modificar únicamente el registrado en la fecha "2022-12-05". Para ello se sustituirá el valor por la media del registrado el día anterior y el día siguiente.
+
+La razón de no eliminar el resto de outliers es debido a que son valores registrados en días consecutivos, por lo que se presupone que son valores correctos afectados por variables externas que se escapan del alcance del ejercicio. Una vez solucionado el problema detectado con los outliers, esta será la serie temporal de datos que utilizaremos en los siguientes apartados.
+
+[Imagen1](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/An%C3%A1lisis_predictivo_consumo_BCN/Imagenes/Imagen1.png)
+
+Si quieres conocer más sobre estos procesos puedes recurrir a la [Guía Práctica de Introducción al Análisis Exploratorio de Datos](https://datos.gob.es/es/documentacion/guia-practica-de-introduccion-al-analisis-exploratorio-de-datos).
+
+### 4.3 Entrenamiento del modelo
+Este apartado podrás encontrarlo en el punto 3 del Notebook.
+
+En primer lugar, creamos dentro de la tabla de datos los atributos temporales (año, mes, día de la semana y trimestre). Estos atributos son variables categóricas que ayudan a garantizar que el modelo sea capaz de capturar con precisión las características y patrones únicos de estas variables. Mediante las siguientes visualizaciones de diagramas de cajas, podemos ver su relevancia dentro de los valores de la serie temporal.
+
+[Imagen2](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/An%C3%A1lisis_predictivo_consumo_BCN/Imagenes/Imagen2.png)
+
+Podemos observar ciertos patrones en las gráficas anteriores como los siguientes:
+
+Los días laborales (lunes a viernes) presentan un mayor consumo que los fines de semana.
+El año que valores de consumo más bajos presenta es el 2020, esto entendemos que se debe a la reducción de actividad servicios e industrial durante la pandemia.
+
+El mes que mayor consumo presenta es julio, lo cual es entendible debido al uso de aparatos de aire acondicionado.
+El segundo trimestre es el que presenta valores más bajos de consumo, destacando abril como el mes con valores más bajos.
+A continuación, dividimos la tabla de datos en [set de entrenamiento y en set de validación](https://telefonicatech.com/blog/datos-entrenamiento-vs-datos-de-test).  El set de entrenamiento se utiliza para entrenar el modelo, es decir, el modelo aprende a predecir el valor de la variable objetivo a partir de dicho set, mientras que el set de validación se utiliza para evaluar el rendimiento del modelo, es decir, el modelo se evalúa con los datos de dicho set para determinar su capacidad para predecir los nuevos valores.
+
+Esta división de los datos es importante para evitar el [sobreajuste](https://es.wikipedia.org/wiki/Sobreajuste) siendo la proporción típica de los datos que se utilizan para el set de entrenamiento de un 70 % y el set de validación del 30% aproximadamente. Para este ejercicio hemos decidido generar el set de entrenamiento con los datos comprendidos entre el "01-01-2019" hasta el "01-10-2021", y el set de validación con los comprendidos entre el "01-10-2021" y el "31-12-2022" como podemos apreciar en la siguiente gráfica.
+
+[Imagen3](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/An%C3%A1lisis_predictivo_consumo_BCN/Imagenes/Imagen3.png)
+
+Para este tipo de ejercicio, tenemos que utilizar algún algoritmo de regresión. Existen diversos modelos y librerías que pueden utilizarse para predicción de series temporales. En este ejercicio utilizaremos el modelo [Gradient Boosting](https://interactivechaos.com/es/manual/tutorial-de-machine-learning/gradient-boosting), modelo de regresión supervisado que se trata de un algoritmo de aprendizaje automático utilizado para predecir un valor continúo basándose en el entrenamiento de un conjunto de datos que contienen valores conocidos para la variable objetivo (en nuestro ejemplo la variable “valor”) y los valores de las variables independientes (en nuestro ejercicio los atributos temporales).
+
+Está basado en árboles de decisión y utiliza una técnica llamada [boosting](https://www.ibm.com/es-es/topics/boosting) para mejorar la precisión del modelo siendo conocido por su eficiencia y capacidad para manejar una variedad de problemas de regresión y clasificación.
+
+Sus principales ventajas son el alto grado de precisión, su robustez y flexibilidad, mientras que alguna de sus desventajas son la sensibilidad a valores atípicos y que requiere una optimización cuidadosa de los parámetros.
+
+Utilizaremos el modelo de regresión supervisado ofrecido en la librería [XGBBoost](https://xgboost.readthedocs.io/en/stable/), el cuál puede ajustarse con los siguientes parámetros:
+
+- n_estimators: parámetro que afecta al rendimiento del modelo indicando el número de árboles utilizados. Un mayor número de árboles generalmente resulta un modelo más preciso, pero también puede llevar más tiempo de entrenamiento.
+- early_stopping_rounds: parámetro que controla el número de rondas de entrenamiento que se ejecutarán antes de que el modelo se detenga si el rendimiento en el conjunto de validación no mejora.
+- learning_rate: controla la velocidad de aprendizaje del modelo. Un valor más alto hará que el modelo aprenda más rápido, pero puede provocar un sobreajuste.
+- max_depth: controla la profundidad máxima de los árboles en el bosque. Un valor más alto puede proporcionar un modelo más preciso, pero también puede provocar un sobreajuste.
+- min_child_weight: controla el peso mínimo de una hoja. Un valor más alto puede ayudar a prevenir el sobreajuste.
+- gamma: controla la cantidad de reducción de la pérdida esperada que se necesita para dividir un nodo. Un valor más alto puede ayudar a prevenir el sobreajuste.
+- colsample_bytree: controla la proporción de las características que se utilizan para construir cada árbol. Un valor más alto puede ayudar a prevenir el sobreajuste.
+- subsample: controla la proporción de los datos que se utilizan para construir cada árbol. Un valor más alto puede ayudar a prevenir el sobreajuste.
+  
+Estos parámetros se pueden ajustar para mejorar el rendimiento del modelo en un conjunto de datos específico. Se recomienda experimentar con diferentes valores de estos parámetros para encontrar el valor que proporciona el mejor rendimiento en tu conjunto de datos.
+
+Por último, mediante una gráfica de barras observaremos de forma visual la importancia de cada uno de los atributos durante el entrenamiento del modelo. Se puede utilizar para identificar los atributos más importantes en un conjunto de datos, lo que puede ser útil para la interpretación del modelo y la selección de características.
+
+[Imagen4](https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/An%C3%A1lisis_predictivo_consumo_BCN/Imagenes/Imagen4.png)
+
 
 
